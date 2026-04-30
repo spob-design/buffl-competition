@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUFFL Wedstrijd mei 2026 — Win samen</title>
+<meta name="description" content="BUFFL competition May 2026 — save together with friends or family." />
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QT4QSGS7MQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QT4QSGS7MQ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /*EDITMODE-BEGIN*/
+    --tw: {
+      "accent": "#6F2A7F",
+      "accentStrong": "#B95ED7",
+      "accentSoft": "#F6EBFC",
+      "ink": "#101828",
+      "muted": "#61646C",
+      "line": "#ECECED",
+      "subtle": "#F9FAFB",
+      "bonusDate": "2026-05-04",
+      "endDate": "2026-05-31T21:59:59Z",
+      "showBonusBanner": true
+    }
+    /*EDITMODE-END*/;
+    --accent: #6F2A7F;
+    --accent-strong: #B95ED7;
+    --accent-soft: #F6EBFC;
+    --ink: #101828;
+    --muted: #61646C;
+    --ink-sub: #333741;
+    --line: #ECECED;
+    --line-strong: #CECFD2;
+    --subtle: #F9FAFB;
+    --chip-grey: #F0F1F1;
+    --chip-grey-ink: #333741;
+    --white: #ffffff;
+    --radius-card: 12px;
+    --radius-pill: 999px;
+    --radius-chip: 6px;
+    --radius-lg: 20px;
+    --shadow-card: 0 1px 2px rgba(0,0,0,0.05), 0 8px 24px rgba(16,24,40,0.04);
+    --shadow-clock: 0 1px 2px rgba(0,0,0,0.05), 0 2px 8px rgba(16,24,40,0.03);
+  }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Roboto", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  p { margin: 0; color: var(--muted); }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* ===== Layout ===== */
+  .wrap {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  @media (min-width: 768px) { .wrap { padding: 0 32px; } }
+
+  section { padding: 56px 0; }
+  @media (min-width: 768px) { section { padding: 80px 0; } }
+
+  .bg-subtle { background: var(--subtle); }
+
+  /* ===== Header ===== */
+  .header {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 4%;
+    gap: 12px;
+  }
+  .header-actions { display: flex; align-items: center; gap: 10px; }
+
+  /* Language switch */
+  .lang-switch {
+    display: inline-flex;
+    background: var(--subtle);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    height: 38px;
+    align-items: center;
+  }
+  .lang-switch button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    height: 30px;
+    min-width: 38px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 160ms ease, color 160ms ease;
+  }
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--ink);
+    color: #fff;
+  }
+  .lang-switch button:not([aria-pressed="true"]):hover { color: var(--ink); }
+  @media (max-width: 420px) {
+    .header-actions .btn-primary { display: none; }
+  }
+  @media (min-width: 768px) {
+    .header-row { height: 72px; padding: 0 4%; }
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .logo img { height: 36px; width: auto; display: block; }
+  @media (min-width: 768px) { .logo img { height: 40px; } }
+  .footer .logo img { filter: brightness(0) invert(1); }
+
+  /* ===== Buttons ===== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 18px;
+    border-radius: var(--radius-pill);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: #fff;
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(16,24,40,0.18); }
+  .btn-secondary {
+    background: #fff;
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .btn-secondary:hover { background: var(--accent-soft); }
+  .btn-accent {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-accent:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(111,42,127,0.28); }
+  .btn-sm { height: 38px; padding: 0 14px; font-size: 13px; }
+
+  /* ===== Tags ===== */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    height: 29px;
+    padding: 0 10px;
+    border-radius: var(--radius-chip);
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .tag-grey { background: var(--chip-grey); color: var(--chip-grey-ink); text-transform: none; letter-spacing: 0.04em; font-size: 13px; font-weight: 400; }
+  .tag-accent-solid { background: var(--accent); color: #fff; }
+
+  /* ===== Hero ===== */
+  .hero { text-align: center; padding-top: 48px; }
+  @media (min-width: 768px) { .hero { padding-top: 88px; padding-bottom: 80px; } }
+  .hero h1 {
+    font-size: clamp(30px, 6vw, 44px);
+    line-height: 1.1;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .hero .lede {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    font-size: 16px;
+    color: var(--muted);
+    text-wrap: pretty;
+  }
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 40px;
+  }
+  .hero-cta .btn { width: 100%; }
+  @media (min-width: 576px) {
+    .hero-cta { flex-direction: row; flex-wrap: wrap; align-items: center; }
+    .hero-cta .btn { width: auto; }
+  }
+
+  /* ===== Countdown ===== */
+  .clock-wrap { max-width: 460px; margin: 0 auto; }
+  .clock-caption {
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    align-items: center;
+    background: var(--subtle);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 10px;
+  }
+  .clock .unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+  }
+  .clock .unit + .unit::before {
+    content: ":";
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: clamp(22px, 5vw, 28px);
+    color: var(--muted);
+  }
+  .clock .num {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: clamp(26px, 7vw, 34px);
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .clock .lbl {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: lowercase;
+  }
+  @media (min-width: 520px) {
+    .clock { padding: 20px 24px; gap: 8px; }
+    .clock .lbl { font-size: 14px; }
+  }
+
+  /* ===== Section header ===== */
+  .section-head {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-head h2 {
+    font-size: clamp(24px, 4.5vw, 32px);
+    line-height: 1.2;
+  }
+  .section-head p { max-width: 560px; text-wrap: pretty; }
+
+  /* ===== Prize cards ===== */
+  .prizes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 680px) {
+    .prizes { grid-template-columns: 1fr 1fr; gap: 24px; }
+  }
+  .prize-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+  .prize-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 14px 32px rgba(16,24,40,0.08);
+  }
+  .prize-card .media {
+    aspect-ratio: 16 / 10;
+    background: #eee center/cover no-repeat;
+    position: relative;
+  }
+  .prize-card .media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.05));
+  }
+  .prize-card .body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .prize-card h3 { font-size: 17px; }
+  .prize-card p { font-size: 15px; }
+
+  /* ===== Steps ===== */
+  .steps { display: flex; flex-direction: column; gap: 0; }
+  .step {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+    padding-bottom: 28px;
+    position: relative;
+  }
+  @media (min-width: 768px) { .step { gap: 32px; padding-bottom: 32px; } }
+  .step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 44px;
+    bottom: 0;
+    width: 1px;
+    background: var(--line-strong);
+  }
+  .step-num {
+    width: 40px; height: 40px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .step-body h3 { font-size: 17px; margin-bottom: 6px; }
+  .step-body p { font-size: 15px; }
+  .step-body .hint {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ===== Bonus banner ===== */
+  .bonus {
+    margin-top: 8px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-strong);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  @media (min-width: 768px) { .bonus { padding: 28px 48px; } }
+  .bonus h3 {
+    font-size: 18px;
+    color: var(--accent);
+    font-family: "Montserrat", sans-serif;
+  }
+  .bonus p { color: var(--accent); font-size: 15px; text-wrap: pretty; }
+  .bonus .deadline-pill {
+    background: #fff;
+    border: 1px solid var(--accent-strong);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ===== Videos ===== */
+  .videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+  @media (min-width: 600px) { .videos { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 900px) { .videos { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+  .video-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+    text-align: left;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .video-card:hover { transform: translateY(-2px); box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 14px 32px rgba(16,24,40,0.08); }
+  .video-card .thumb {
+    aspect-ratio: 16 / 10;
+    background:
+      linear-gradient(135deg, rgba(111,42,127,0.14), rgba(185,94,215,0.06)),
+      repeating-linear-gradient(45deg, #EEE 0 10px, #F6F6F7 10px 20px);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .video-card .yt-thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video-card .thumb .play-btn { position: relative; z-index: 1; }
+  .video-card .play-btn {
+    width: 56px; height: 56px; border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(111,42,127,0.35);
+    transition: transform 160ms ease;
+  }
+  .video-card:hover .play-btn { transform: scale(1.08); }
+  .video-card .meta { padding: 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .video-card h3 { font-size: 16px; }
+  .video-card p { font-size: 14px; }
+
+  /* ===== FAQ ===== */
+  .faq-list {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .faq-item {
+    border-top: 1px solid var(--line);
+  }
+  .faq-item:first-child { border-top: 0; }
+  .faq-q {
+    appearance: none;
+    width: 100%;
+    background: #fff;
+    border: 0;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+  }
+  .faq-q:hover { background: var(--subtle); }
+  .faq-q[aria-expanded="true"] { color: var(--accent); }
+  .faq-chev { transition: transform 220ms ease; flex-shrink: 0; }
+  .faq-q[aria-expanded="true"] .faq-chev { transform: rotate(180deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 260ms ease;
+  }
+  .faq-a-inner {
+    padding: 0 24px 20px;
+    color: var(--muted);
+    font-size: 15px;
+    text-wrap: pretty;
+  }
+
+  /* ===== Footer ===== */
+  .footer {
+    background: var(--ink);
+    color: #fff;
+    padding: 40px 0 32px;
+    margin-top: 0;
+  }
+  .footer .wrap {
+    max-width: none;
+    width: 100%;
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  @media (min-width: 700px) {
+    .footer .wrap { flex-direction: row; align-items: center; justify-content: space-between; }
+  }
+  .footer .logo { color: #fff; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; font-size: 14px; color: rgba(255,255,255,0.7); }
+  .footer-links a { text-decoration: none; }
+  .footer-links a:hover { color: #fff; }
+  .footer-links .copy { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+  /* ===== Video Modal ===== */
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(16,24,40,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .modal.open { display: flex; }
+  .modal-box {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 560px;
+    padding: 24px;
+    box-shadow: 0 24px 80px rgba(16,24,40,0.28);
+  }
+  .modal-box h3 { margin-bottom: 8px; }
+  .modal-close {
+    margin-top: 16px;
+    background: var(--ink);
+    color: #fff;
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .modal-box.video-modal-box { max-width: 420px; padding: 16px; background: #000; }
+  .modal-box.video-modal-box .yt-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+  }
+  .modal-box.video-modal-box iframe {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .modal-box.video-modal-box .modal-close {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  /* ===== Tweaks panel ===== */
+  #tweaks-panel {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    width: min(320px, calc(100vw - 40px));
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 18px 48px rgba(16,24,40,0.18);
+    padding: 18px;
+    z-index: 200;
+    display: none;
+    font-family: "Roboto", sans-serif;
+  }
+  #tweaks-panel.open { display: block; }
+  #tweaks-panel h4 { font-size: 14px; margin-bottom: 14px; font-family: "Montserrat", sans-serif; }
+  .tweak-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .tweak-row label { font-size: 13px; color: var(--ink-sub); }
+  .tweak-row input[type=color] { width: 36px; height: 28px; border: 1px solid var(--line); border-radius: 6px; background: none; padding: 0; cursor: pointer; }
+  .tweak-row input[type=date] { font: inherit; font-size: 13px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px; }
+  .tweak-swatches { display: flex; gap: 6px; }
+  .tweak-swatches button { width: 22px; height: 22px; border-radius: 999px; border: 2px solid transparent; padding: 0; cursor: pointer; }
+  .tweak-swatches button.active { border-color: var(--ink); }
+
+  /* ===== Fade-in ===== */
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity 500ms ease, transform 500ms ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-row">
+    <a href="https://buffl.be" class="logo" aria-label="BUFFL">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ1IiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTQ1IDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNCAyNi4wMjU3QzcuNTY4NDUgMjYuMDE5MSA3LjU2ODQ1IDI2LjAxOTEgMTEuMjA5IDI2LjAxMjRDMTEuOTU4NCAyNi4wMTA1IDEyLjcwNzggMjYuMDA4NSAxMy40Nzk5IDI2LjAwNjVDMTQuMzk5NSAyNi4wMDU2IDE0LjM5OTUgMjYuMDA1NiAxNC44MzA5IDI2LjAwNTRDMTUuMTMwMyAyNi4wMDUyIDE1LjQyOTYgMjYuMDA0NCAxNS43MjkgMjYuMDAzM0MxNi4xMTIzIDI2LjAwMTggMTYuNDk1NiAyNi4wMDE0IDE2Ljg3ODkgMjYuMDAxN0MxNy4wMTg3IDI2LjAwMTYgMTcuMTU4NSAyNi4wMDEyIDE3LjI5ODMgMjYuMDAwNEMxOC4zOTYgMjUuOTk0MiAxOS40ODU5IDI2LjA2NTEgMjAuNTI5MSAyNi40MzcxQzIwLjU4MjEgMjYuNDU1NSAyMC42MzUxIDI2LjQ3NCAyMC42ODk3IDI2LjQ5MjlDMjIuMTcyNyAyNy4wMjQzIDIzLjI4NjggMjguMDIzNSAyMy45ODI1IDI5LjQyMzVDMjQuOTAyMSAzMS40MDM3IDI0Ljg0NTQgMzMuOTY0NCAyNC4xMjQ3IDM2LjAwNjlDMjMuNTU0MyAzNy40MjgzIDIyLjY4ODIgMzguMzY1NiAyMS4yODAyIDM4Ljk4QzIxLjEzODcgMzkuMDI5MiAyMC45OTY3IDM5LjA3NzEgMjAuODUzNSAzOS4xMjE2QzIwLjkxNzQgMzkuMTM1NSAyMC45ODEyIDM5LjE0OTMgMjEuMDQ2OSAzOS4xNjM2QzIyLjU4OCAzOS41MzEzIDIzLjkzNzggNDAuMzQ3NiAyNC44MDkyIDQxLjY5MjFDMjUuMDIwNCA0Mi4wNjg5IDI1LjE1ODUgNDIuNDUzNyAyNS4yODQ3IDQyLjg2NDZDMjUuMzAyIDQyLjkyMDQgMjUuMzE5MiA0Mi45NzYzIDI1LjMzNyA0My4wMzM5QzI1LjU5NSA0My45MzA3IDI1LjY0NTEgNDQuODMxOCAyNS42NDAzIDQ1Ljc1ODFDMjUuNjQwMSA0NS44MTA5IDI1LjY0IDQ1Ljg2MzggMjUuNjM5OCA0NS45MTgzQzI1LjYzMDYgNDcuODk1NiAyNS4xOTY5IDQ5LjkwMDkgMjMuNzY5MSA1MS4zNjgxQzIyLjc0NjkgNTIuMzIyMSAyMS41NzQ5IDUyLjg3NzUgMjAuMjE4IDUzLjE1OTlDMjAuMTY0NyA1My4xNzEyIDIwLjExMTUgNTMuMTgyNSAyMC4wNTY2IDUzLjE5NDFDMTkuMDA1MyA1My4zOTM3IDE3LjkwOTggNTMuMzYwMyAxNi44NDQyIDUzLjM1ODJDMTYuNzAwOSA1My4zNTgyIDE2LjU1NzcgNTMuMzU4MiAxNi40MTQ0IDUzLjM1ODJDMTYuMDM0NSA1My4zNTgyIDE1LjY1NDYgNTMuMzU3OCAxNS4yNzQ3IDUzLjM1NzNDMTQuOTE2OCA1My4zNTY5IDE0LjU1ODkgNTMuMzU2OSAxNC4yMDEgNTMuMzU2OEMxMy4xNTc3IDUzLjM1NjUgMTIuMTE0NSA1My4zNTU1IDExLjA3MTIgNTMuMzU0NkM4LjczNzcgNTMuMzUzMSA2LjQwNDIxIDUzLjM1MTcgNCA1My4zNTAyQzQgNDQuMzMzMSA0IDM1LjMxNiA0IDI2LjAyNTdaTTkuNjE3ODUgMzAuNjI2OUM5LjYxNzg1IDMyLjg2OTUgOS42MTc4NSAzNS4xMTIxIDkuNjE3ODUgMzcuNDIyN0MxMC44NDgzIDM3LjQzMyAxMC44NDgzIDM3LjQzMyAxMi4wNzg3IDM3LjQ0QzEyLjU4MTEgMzcuNDQyMSAxMy4wODM0IDM3LjQ0NDYgMTMuNTg1NyAzNy40NDk0QzEzLjk5MSAzNy40NTMyIDE0LjM5NjMgMzcuNDU1MyAxNC44MDE2IDM3LjQ1NjNDMTQuOTU1NyAzNy40NTY5IDE1LjEwOTggMzcuNDU4MiAxNS4yNjM5IDM3LjQ2MDFDMTYuNjE4NyAzNy40ODIyIDE2LjYxODcgMzcuNDgyMiAxNy43ODY4IDM2Ljg1MTlDMTguNjA3OCAzNS45MjcgMTguNzI3OSAzNC42NzE2IDE4LjY2NDEgMzMuNDkwNEMxOC41OTE1IDMyLjY1MjcgMTguMzMyNSAzMS44Mjk1IDE3LjcwNjggMzEuMjM3NUMxNi43NzkyIDMwLjUyMjIgMTUuNTMxNCAzMC42MDY4IDE0LjQyMzUgMzAuNjEzMUMxNC4zMDAxIDMwLjYxMzMgMTQuMTc2NyAzMC42MTM1IDE0LjA1MzMgMzAuNjEzNkMxMy42IDMwLjYxNDMgMTMuMTQ2NyAzMC42MTYzIDEyLjY5MzQgMzAuNjE4MUMxMS4xNzEgMzAuNjIyNSAxMS4xNzEgMzAuNjIyNSA5LjYxNzg1IDMwLjYyNjlaTTkuNjE3ODUgNDEuOTUzMkM5LjYxNzg1IDQ0LjE0OSA5LjYxNzg1IDQ2LjM0NDkgOS42MTc4NSA0OC42MDczQzEwLjk2MzggNDguNjEzNSAxMC45NjM4IDQ4LjYxMzUgMTIuMzA5NyA0OC42MTc3QzEyLjg1OSA0OC42MTg5IDEzLjQwODMgNDguNjIwNCAxMy45NTc2IDQ4LjYyMzNDMTQuNDAwNyA0OC42MjU2IDE0Ljg0MzggNDguNjI2OSAxNS4yODY5IDQ4LjYyNzVDMTUuNDU1NiA0OC42Mjc4IDE1LjYyNDMgNDguNjI4NiAxNS43OTI5IDQ4LjYyOThDMTYuMDMgNDguNjMxMyAxNi4yNjcgNDguNjMxNSAxNi41MDQxIDQ4LjYzMTRDMTYuNjA3NiA0OC42MzI2IDE2LjYwNzYgNDguNjMyNiAxNi43MTMyIDQ4LjYzMzdDMTcuNDk0NiA0OC42MzAzIDE4LjE5MzkgNDguNDQ3NyAxOC43ODIxIDQ3LjkyMjFDMTkuNDM5NiA0Ny4yNDM3IDE5LjYzMzkgNDYuMzE5NCAxOS42NjY5IDQ1LjQwNDFDMTkuNjUwNyA0NC42NjUxIDE5LjUxMzQgNDMuODc2MSAxOS4xNDY5IDQzLjIyNzRDMTkuMTA1OCA0My4xNTQ0IDE5LjA2NDcgNDMuMDgxNCAxOS4wMjI0IDQzLjAwNjFDMTguNTQ3NSA0Mi40MDIxIDE3Ljk4MzggNDIuMDg1IDE3LjIyNjggNDEuOTUzMkMxNy4xMTY0IDQxLjk0NzIgMTcuMDA1OCA0MS45NDQ1IDE2Ljg5NTIgNDEuOTQ0NkMxNi44MzA3IDQxLjk0NDUgMTYuNzY2MiA0MS45NDQ0IDE2LjY5OTcgNDEuOTQ0M0MxNi41OTQ5IDQxLjk0NDcgMTYuNTk0OSA0MS45NDQ3IDE2LjQ4OCA0MS45NDUxQzE2LjQxMzcgNDEuOTQ1MSAxNi4zMzk1IDQxLjk0NTEgMTYuMjYyOSA0MS45NDUxQzE2LjAxNzggNDEuOTQ1MSAxNS43NzI3IDQxLjk0NTcgMTUuNTI3NiA0MS45NDYyQzE1LjM1NzYgNDEuOTQ2NCAxNS4xODc1IDQxLjk0NjUgMTUuMDE3NCA0MS45NDY1QzE0LjU3IDQxLjk0NjggMTQuMTIyNiA0MS45NDc1IDEzLjY3NTIgNDEuOTQ4M0MxMy4xMzgyIDQxLjk0OTEgMTIuNjAxMyA0MS45NDk1IDEyLjA2NDMgNDEuOTQ5OUMxMS4yNDg4IDQxLjk1MDYgMTAuNDMzMyA0MS45NTE5IDkuNjE3ODUgNDEuOTUzMloiIGZpbGw9IiMxMDE4MjgiPjwvcGF0aD4KPHBhdGggZD0iTTY0LjAxODkgMjYuMDI1N0M2OS45MjEyIDI2LjAyNTcgNjkuOTIxMiAyNi4wMjU3IDcyLjQ4MTMgMjYuODc1MUM3OC45MDY1IDI4LjU5NzIgODUuMjQwOCAyOC4zNDAzIDkxLjUxNCAyNi4xNzMxQzkxLjU3MDggMjYuMTUzNiA5MS42Mjc1IDI2LjEzNDIgOTEuNjg1OSAyNi4xMTQyQzkxLjczNTIgMjYuMDk3IDkxLjc4NDQgMjYuMDc5OSA5MS44MzUxIDI2LjA2MjJDOTEuOTY1OSAyNi4wMjU3IDkxLjk2NTkgMjYuMDI1NyA5Mi4xNzkzIDI2LjAyNTdDOTIuMTc5MyAyNy42ODQzIDkyLjE3OTMgMjkuMzQyOCA5Mi4xNzkzIDMxLjA1MTdDOTEuMjE2OSAzMS40NTA5IDkxLjIxNjkgMzEuNDUwOSA5MC44NjE1IDMxLjU2MjFDOTAuNzgxNSAzMS41ODcyIDkwLjcwMTQgMzEuNjEyMyA5MC42MTg5IDMxLjYzODFDOTAuNTM1NSAzMS42NjM2IDkwLjQ1MiAzMS42ODkxIDkwLjM2NTkgMzEuNzE1M0M5MC4yNzY3IDMxLjc0MjYgOTAuMTg3NCAzMS43Njk5IDkwLjA5NTQgMzEuNzk4MUM4Ny45NjQ5IDMyLjQ0MzIgODUuNzkyNyAzMi44OTUyIDgzLjU3NDcgMzMuMTA0NkM4My41MDMxIDMzLjExMTMgODMuNDMxNSAzMy4xMTgxIDgzLjM1NzcgMzMuMTI1MUM4Mi41NjcyIDMzLjE5MDUgODEuNzc2MyAzMy4xOTI2IDgwLjk4MzYgMzMuMTkzQzgwLjg3MjkgMzMuMTkzMSA4MC44NzI5IDMzLjE5MzEgODAuNzU5OSAzMy4xOTMyQzc5LjUwNDcgMzMuMTkxOSA3OC4yNzcxIDMzLjEzNjMgNzcuMDMyNCAzMi45NjNDNzYuOTQ0NyAzMi45NTA4IDc2Ljg1NjkgMzIuOTM4NyA3Ni43NjY1IDMyLjkyNjJDNzQuMzM0NyAzMi41Nzc4IDcyLjAzMzggMzEuODk0MyA2OS43MDc5IDMxLjEyMjVDNjkuNzA3OSAzMy4xMDgxIDY5LjcwNzkgMzUuMDkzNyA2OS43MDc5IDM3LjEzOTVDNjkuOTQyNiAzNy4yMDk2IDcwLjE3NzIgMzcuMjc5NyA3MC40MTkgMzcuMzUxOUM3MC41ODQ5IDM3LjQwNDEgNzAuNzUwNyAzNy40NTY4IDcwLjkxNjIgMzcuNTEwMUM3Ni43Njg1IDM5LjM3ODggODIuNzAyMiAzOS43Mjc5IDkwLjcxMzYgMzcuNTk1M0M5MC44MTQ5IDM3LjU2MTMgOTAuODE0OSAzNy41NjEzIDkwLjkxODIgMzcuNTI2NkM5MC45NzY3IDM3LjUwNjUgOTEuMDM1MiAzNy40ODY0IDkxLjA5NTQgMzcuNDY1N0M5MS4yNTQ4IDM3LjQyMjcgOTEuMjU0OCAzNy40MjI3IDkxLjUzOTMgMzcuNDIyN0M5MS41MzkzIDM5LjA4MTMgOTEuNTM5MyA0MC43Mzk4IDkxLjUzOTMgNDIuNDQ4N0M5MC45MjYzIDQyLjY5MjcgOTAuMzIyNiA0Mi44OTMxIDg5LjY5MDQgNDMuMDcyNUM4OS42MzY0IDQzLjA4NzkgODkuNTgyNCA0My4xMDMyIDg5LjUyNjggNDMuMTE5Qzg3LjY0NDEgNDMuNjUwOSA4NS43MzQyIDQ0LjAxMTYgODMuNzg4MSA0NC4yMTg0QzgzLjcwMzUgNDQuMjI3NSA4My43MDM1IDQ0LjIyNzUgODMuNjE3MyA0NC4yMzY4QzgzLjExMDggNDQuMjg3NiA4Mi42MDg2IDQ0LjMwMTYgODIuMDk5NyA0NC4zMDM2QzgyLjAxNDggNDQuMzA0MSA4MS45Mjk5IDQ0LjMwNDYgODEuODQyNSA0NC4zMDUxQzc4LjMyMDQgNDQuMzIxMSA3OC4zMjA0IDQ0LjMyMTEgNzYuODE5MSA0NC4wNzY4Qzc2LjcyNzQgNDQuMDYyNCA3Ni42MzU3IDQ0LjA0NzkgNzYuNTQxMyA0NC4wMzMxQzc0LjM0NTYgNDMuNjgyOSA3Mi4yNDg2IDQzLjEwNjUgNzAuMTQ4OCA0Mi4zODUzQzcwLjAwMjEgNDIuMzM0OSA2OS44NTUxIDQyLjI4NTIgNjkuNzA3OSA0Mi4yMzYzQzY5LjcwNzkgNDUuOTAzOSA2OS43MDc5IDQ5LjU3MTQgNjkuNzA3OSA1My4zNTAyQzY3LjgzMDUgNTMuMzUwMiA2NS45NTMyIDUzLjM1MDIgNjQuMDE4OSA1My4zNTAyQzY0LjAxODkgNDQuMzMzMSA2NC4wMTg5IDM1LjMxNiA2NC4wMTg5IDI2LjAyNTdaIiBmaWxsPSIjMTAxODI4Ij48L3BhdGg+CjxwYXRoIGQ9Ik0zMy43OTYzIDI2LjAyNTdDMzUuNjk3MSAyNi4wMjU3IDM3LjU5NzkgMjYuMDI1NyAzOS41NTYzIDI2LjAyNTdDMzkuNTU3NCAyNi42MTUyIDM5LjU1ODQgMjcuMjA0OCAzOS41NTk1IDI3LjgxMjJDMzkuNTYzIDI5LjcwMDIgMzkuNTY3NSAzMS41ODgzIDM5LjU3MjYgMzMuNDc2M0MzOS41NzM0IDMzLjc2OTggMzkuNTc0MiAzNC4wNjMyIDM5LjU3NSAzNC4zNTY3QzM5LjU3NTIgMzQuNDE1MSAzOS41NzUzIDM0LjQ3MzUgMzkuNTc1NSAzNC41MzM3QzM5LjU3OCAzNS40Nzg2IDM5LjU3OTggMzYuNDIzNSAzOS41ODEzIDM3LjM2ODVDMzkuNTgyOCAzOC4zMzg2IDM5LjU4NTIgMzkuMzA4OCAzOS41ODgyIDQwLjI3ODlDMzkuNTkwMSA0MC44NzcyIDM5LjU5MTQgNDEuNDc1NCAzOS41OTE4IDQyLjA3MzdDMzkuNTkyMiA0Mi40ODQ0IDM5LjU5MzQgNDIuODk1IDM5LjU5NTEgNDMuMzA1N0MzOS41OTYxIDQzLjU0MjQgMzkuNTk2NyA0My43NzkgMzkuNTk2NSA0NC4wMTU3QzM5LjU5NjQgNDQuMjczIDM5LjU5NzYgNDQuNTMwMyAzOS41OTkxIDQ0Ljc4NzZDMzkuNTk4OCA0NC44NjE0IDM5LjU5ODQgNDQuOTM1MyAzOS41OTgxIDQ1LjAxMTNDMzkuNjA3NSA0NS45OTk0IDM5Ljg4MzUgNDYuODg1NyA0MC41Nzg2IDQ3LjYwNzRDNDEuNzg1OCA0OC43Mjc0IDQzLjM3NCA0OC44MTUzIDQ0Ljk0NTUgNDguNzYyNEM0NS45NzA5IDQ4LjcwMTggNDcuMDcxOCA0OC4zMzU4IDQ3LjgyMzkgNDcuNjE2QzQ4LjU4NjggNDYuNzQ0IDQ4LjgxMTEgNDUuNzYwMSA0OC44MTIyIDQ0LjYzNDRDNDguODEyNSA0NC41NTQ4IDQ4LjgxMjkgNDQuNDc1MiA0OC44MTMyIDQ0LjM5MzNDNDguODE0MyA0NC4xMjY1IDQ4LjgxNDkgNDMuODU5OCA0OC44MTU1IDQzLjU5MzFDNDguODE2MiA0My40MDE5IDQ4LjgxNjkgNDMuMjEwOCA0OC44MTc2IDQzLjAxOTZDNDguODE5MiA0Mi42MDggNDguODIwNSA0Mi4xOTY0IDQ4LjgyMTYgNDEuNzg0OEM0OC44MjMyIDQxLjE4OTcgNDguODI1MiA0MC41OTQ2IDQ4LjgyNzMgMzkuOTk5NUM0OC44MzA3IDM5LjAzNCA0OC44MzM4IDM4LjA2ODQgNDguODM2NiAzNy4xMDI4QzQ4LjgzOTQgMzYuMTY1IDQ4Ljg0MjQgMzUuMjI3MSA0OC44NDU1IDM0LjI4OTNDNDguODQ1OCAzNC4yMDI1IDQ4Ljg0NTggMzQuMjAyNSA0OC44NDYxIDM0LjExNEM0OC44NDcxIDMzLjgyNCA0OC44NDgxIDMzLjUzMzkgNDguODQ5IDMzLjI0MzhDNDguODU3MiAzMC44Mzc3IDQ4Ljg2NDcgMjguNDMxNyA0OC44NzIgMjYuMDI1N0M1MC43NzI4IDI2LjAyNTcgNTIuNjczNyAyNi4wMjU3IDU0LjYzMjEgMjYuMDI1N0M1NC42MzUyIDI4LjUzNjkgNTQuNjM3OSAzMS4wNDggNTQuNjM5NCAzMy41NTkyQzU0LjYzOTUgMzMuODU2MyA1NC42Mzk3IDM0LjE1MzQgNTQuNjM5OSAzNC40NTA0QzU0LjY0IDM0LjUzOTEgNTQuNjQgMzQuNTM5MSA1NC42NCAzNC42Mjk2QzU0LjY0MDYgMzUuNTg0NyA1NC42NDE4IDM2LjUzOTkgNTQuNjQzMSAzNy40OTVDNTQuNjQ0NCAzOC40NzY0IDU0LjY0NTIgMzkuNDU3OCA1NC42NDU1IDQwLjQzOTNDNTQuNjQ1NyA0MS4wNDM5IDU0LjY0NjMgNDEuNjQ4NiA1NC42NDc0IDQyLjI1MzNDNTQuNjQ4MiA0Mi42NjkgNTQuNjQ4NCA0My4wODQ3IDU0LjY0ODIgNDMuNTAwNEM1NC42NDgxIDQzLjczOTYgNTQuNjQ4MyA0My45Nzg3IDU0LjY0OSA0NC4yMTc5QzU0LjY1NjEgNDYuNzczOCA1NC40MzIxIDQ5LjAwNDggNTIuNTY5OCA1MC45NDMzQzUyLjUxMTEgNTEuMDA4NSA1Mi41MTExIDUxLjAwODUgNTIuNDUxMiA1MS4wNzVDNTAuODA1MiA1Mi44Mzg5IDQ3Ljk2MDYgNTMuNTMyNCA0NS42Mjg2IDUzLjY0MkM0NS4xNTQyIDUzLjY1NjcgNDQuNjc5OSA1My42NTcyIDQ0LjIwNTMgNTMuNjU1NEM0NC4xMzMgNTMuNjU1MyA0NC4wNjA4IDUzLjY1NTIgNDMuOTg2MyA1My42NTVDNDIuOTQ2OSA1My42NTE5IDQxLjkyODQgNTMuNjM0NyA0MC45MDc1IDUzLjQyMDlDNDAuODQ3OCA1My40MDg4IDQwLjc4ODEgNTMuMzk2NiA0MC43MjY2IDUzLjM4NDFDMzguNDM4OCA1Mi45MDM1IDM2LjI4NTEgNTEuOTAwNCAzNC45NTYzIDQ5LjkwODFDMzQuMDk0NiA0OC41NTE2IDMzLjc4MzQgNDcuMDEyNiAzMy43ODc3IDQ1LjQyNjFDMzMuNzg3NyA0NS4zNDI4IDMzLjc4NzYgNDUuMjU5NiAzMy43ODc1IDQ1LjE3MzlDMzMuNzg3NCA0NC45NDQ1IDMzLjc4NzcgNDQuNzE1MSAzMy43ODggNDQuNDg1N0MzMy43ODgzIDQ0LjIzNzcgMzMuNzg4MiA0My45ODk4IDMzLjc4ODIgNDMuNzQxOEMzMy43ODgxIDQzLjMxMjcgMzMuNzg4MyA0Mi44ODM2IDMzLjc4ODcgNDIuNDU0NUMzMy43ODkzIDQxLjgzNDEgMzMuNzg5NSA0MS4yMTM3IDMzLjc4OTYgNDAuNTkzM0MzMy43ODk4IDM5LjU4NjcgMzMuNzkwMiAzOC41OCAzMy43OTA5IDM3LjU3MzRDMzMuNzkxNiAzNi41OTU4IDMzLjc5MjEgMzUuNjE4MSAzMy43OTI0IDM0LjY0MDVDMzMuNzkyNCAzNC41NTAxIDMzLjc5MjQgMzQuNTUwMSAzMy43OTI0IDM0LjQ1NzhDMzMuNzkyNSAzNC4xNTUyIDMzLjc5MjYgMzMuODUyNyAzMy43OTI3IDMzLjU1MDFDMzMuNzkzNCAzMS4wNDIgMzMuNzk0NyAyOC41MzM4IDMzLjc5NjMgMjYuMDI1N1oiIGZpbGw9IiMxMDE4MjgiPjwvcGF0aD4KPHBhdGggZD0iTTk3LjUxMjEgMjYuMDI1N0MxMDMuNDI2IDI2LjAyNTcgMTA5LjMzOSAyNi4wMjU3IDExNS40MzIgMjYuMDI1N0MxMTUuNDMyIDI3LjY4NDMgMTE1LjQzMiAyOS4zNDI4IDExNS40MzIgMzEuMDUxN0MxMTEuMzk2IDMxLjA1MTcgMTA3LjM2IDMxLjA1MTcgMTAzLjIwMSAzMS4wNTE3QzEwMy4yMDEgMzMuMDM3MyAxMDMuMjAxIDM1LjAyMjkgMTAzLjIwMSAzNy4wNjg3QzEwNy4wMDMgMzcuMDY4NyAxMTAuODA0IDM3LjA2ODcgMTE0LjcyMSAzNy4wNjg3QzExNC43MjEgMzguNzUwNyAxMTQuNzIxIDQwLjQzMjYgMTE0LjcyMSA0Mi4xNjU1QzExMC45MiA0Mi4xNjU1IDEwNy4xMTggNDIuMTY1NSAxMDMuMjAxIDQyLjE2NTVDMTAzLjIwMSA0NS44NTY1IDEwMy4yMDEgNDkuNTQ3NCAxMDMuMjAxIDUzLjM1MDJDMTAxLjMyNCA1My4zNTAyIDk5LjQ0NjQgNTMuMzUwMiA5Ny41MTIxIDUzLjM1MDJDOTcuNTEyMSA0NC4zMzMxIDk3LjUxMjEgMzUuMzE2IDk3LjUxMjEgMjYuMDI1N1oiIGZpbGw9IiMxMDE4MjgiPjwvcGF0aD4KPHBhdGggZD0iTTEyMy42ODEgMjYuMDI1N0MxMjUuNjA1IDI2LjAyNTcgMTI3LjUzIDI2LjAyNTcgMTI5LjUxMiAyNi4wMjU3QzEyOS41MTIgMzMuNDA3NSAxMjkuNTEyIDQwLjc4OTQgMTI5LjUxMiA0OC4zOTQ5QzEzMy4zMzcgNDguMzk0OSAxMzcuMTYyIDQ4LjM5NDkgMTQxLjEwMyA0OC4zOTQ5QzE0MS4xMDMgNTAuMDMwMiAxNDEuMTAzIDUxLjY2NTQgMTQxLjEwMyA1My4zNTAyQzEzNS4zNTQgNTMuMzUwMiAxMjkuNjA1IDUzLjM1MDIgMTIzLjY4MSA1My4zNTAyQzEyMy42ODEgNDQuMzMzMSAxMjMuNjgxIDM1LjMxNiAxMjMuNjgxIDI2LjAyNTdaIiBmaWxsPSIjMTAxODI4Ij48L3BhdGg+Cjwvc3ZnPg==" alt="BUFFL" style="width: 72.5px; object-fit: contain; height: 40px" />
+    </a>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="nl" aria-pressed="true">NL</button>
+        <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      </div>
+      <a href="https://58obq.app.link/Ja4NQopxOLb" class="btn btn-primary btn-sm" data-i18n="nav.cta">Download the app</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="tag" data-i18n="hero.kicker">BUFFL Wedstrijd mei 2026</span>
+    <h1 data-i18n="hero.title">Spaar sneller samen en win een onvergetelijke ervaring t.w.v. €250 met je vrienden of familie</h1>
+    <p class="lede" data-i18n="hero.lede">De leukste herinneringen maak je samen, dus waarom zou je ook niet samen winnen? Daarom zetten we met deze wedstrijd de kracht van de Herd in de spotlight: nodig vrienden of familie uit, bundel jullie tokens en spaar tot 5 keer sneller in de BUFFL app. Bovendien maak je samen kans op de volgende prijzen.</p>
+    <div class="hero-cta">
+      <a href="#prizes" class="btn btn-accent" data-i18n="hero.cta1">Bekijk de prijzen</a>
+      <a href="#how" class="btn btn-secondary" data-i18n="hero.cta2">Hoe deelnemen?</a>
+    </div>
+
+    <div class="clock-wrap" role="timer" aria-live="polite">
+      <div class="clock" id="clock">
+        <div class="unit"><span class="num" id="cd-d">00</span><span class="lbl" data-i18n="clock.days">dagen</span></div>
+        <div class="unit"><span class="num" id="cd-h">00</span><span class="lbl" data-i18n="clock.hours">uur</span></div>
+        <div class="unit"><span class="num" id="cd-m">00</span><span class="lbl" data-i18n="clock.minutes">minuten</span></div>
+        <div class="unit"><span class="num" id="cd-s">00</span><span class="lbl" data-i18n="clock.seconds">seconden</span></div>
+      </div>
+      <p class="clock-caption" id="cd-caption">Wedstrijd eindigt op 31 mei 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIZES -->
+<section id="prizes" class="bg-subtle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="tag" data-i18n="prizes.kicker">De prijzen</span>
+      <h2 data-i18n="prizes.title">Prijzen die gekozen zijn om samen te beleven</h2>
+      <p data-i18n="prizes.lede">Van een relaxed weekendje weg tot een knallend concert. We kozen prijzen die gemaakt zijn om te delen, want dat is precies waar deze wedstrijd om draait.</p>
+    </div>
+
+    <div class="prizes">
+      <article class="prize-card reveal">
+        <div class="media" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAJYA8ADASIAAhEBAxEB/8QAHAABAQADAQEBAQAAAAAAAAAAAAEGBwgFBAID/8QAUhABAAEDAwAGBQYICwYFAwUAAAECAwQFBhEHEiExQWEIE1FxgRQidJGhsTI2N0JSgrKzFSM1Q2Jyc5TBwtIWFzNVVpIYNHWD0SREokZTo/Dx/8QAHAEBAQEAAwEBAQAAAAAAAAAAAAECBQYHAwQI/8QAOBEBAAECBAIHBQYHAQEAAAAAAAECAwQFESEGMRJBUWFxkbETFIGhwSIyctHh8DQ1QmKCsvEVJf/aAAwDAQACEQMRAD8AxMB+J/QAAAAAAoAAAAKirAIqCAACoqgAogqEKAKAAgAsAAAAAAoAKAAAAACgqKIACACqAgADQAAACACgAAiooAAkoso0pKLKAAKoipIgkqkioAoAKIAokhIoIqAIqKBISKgEqIAoAKJKLKASiygoiooqSCwCSqSogAACiAKJISCoiygAAoAD1wHAsAAAAACgAAAAqKsIIqAAAKiqACgioKAKAAgAoAAAAAKACgAAAAAoKiiSACACqIAADQACAAACgAAgKAAJKKiqSiyigAKIqKgkqkioBKgAogCiSEigioAioqiSqAEiSoAKACiSiygEosoKIqKQAKCSqSogACKigAokhIKiLKAACgAPXAcCwAAAAAKAAAACoqwCKggAACqACiAEKAKAAgAsAAAAAAoAKAAAAACgqKJIAIAKoioAA0AAgAAAoAAIqKAAJKLKKpKLKKACqJKoIJKpIqAKACiAKJISKCKgCKigipIoSCiAKACiSiygEosoKIqKAEqCSqSogACKKIAokhIKiLKAACgAPXAcCwAAAAAKAAAACoqwCKggAAvgiqACgioKAKAAgAsAAAAAAoAKAAAAACgqKIACACqgCgAoACAAACgAAiooAAkoso0oiygACqJKoIJKpIqAKACiAKqSEioIqAIqKBIkiiSpKiAKACiSioBKLKCiKikBIKCSqSogAAIoAKJISCoioAAKAA9cBwLAAAAAAoAAAAAqwiAAAAKiqACiCoKAKAAgAsAAAAAAoAKAAAAACgqKJIAIAKqAAANAAIAAAKAAIKigACSiyjSkosoAAqiKggkqkioAoAKIAokhIoIqAIqKCKkihISogCgAokosoBKKgpKKigAoJKpKiAAIqKACiSEgqSioAAKAA9cBwLAAAAAAoAAAAKirAIqCAACoqgAogqEKAKAAgAsAAAAAAoAKAAAAACgqKIACACqIqKACgAIAAAKAACKigACSioqkoqKACqIqSIJKpIqEgoCKogCiSEigioAiooJKkioSEqIAoAKJKLKAIsoKIqKACgipKiAAAigAokhIKkoqAACgAPXAcCwAAAAAKAAAACoqwCAIAAKiqACggCgCgAIALAAAAAAKACgAAAAAoLCKJIAIAKqAKACgAIAAAKAACAoAAkoqNKSiygACqIqCCSqSKgCgAogCiSEigioAiopAkqgokqSogCgACIsooSiygoiooAKCSqSogACKigAokhIKiKgAAoAD1wHAsAAAAACgAAAAqKsAioIAAKiqAIoqAKAKAAgAsAAAAAAoAKAAAAACgqKJIAIAKoCAANAAIAAAKAACKigACSiyjSkosoAAqiKggkqkioAoAKIAokhIoIqAIqKCSqSKEhKiAKIoKJKLKASiygoiooqSErAJKpKiAAIoogCiSEgqIsoAAKAA9cBwLAAAAAAoAAAAKirCCKgAACoqgAoIqCgCgAIALAAAAAAKACgAAAAAoKiiAAgAqoAoAKAAgAAAoAAIqKAAJKLKKoiyigAqiSqCCSqSKgCgAogCiSEigioAiooEiSKEhKiAKACiSioBKLKCiKigAsAkqkqIAAiooAKJISCoioAAKAA9cBwLAAAAAAoAAAAAqwIKggAAqKoAKCKgoAoACACwAAAAACgAoAAAAAKCookgAgAqoCqIAoACAAACgAAiooAAkoso0pKLKAAKokqggkqkioSCgAogCiSEigioAiooIqChISogCgiiiSiygEosoKIqKBILAJKpKiAAIqKACiSEgqSioEAAoAD1wHAsAAAAACgAAAAqKsIIqAAAKiqACiCoQoAoACACwAAAAACgAoAAAAAKCookgAACgioAA0AAgAAAoAAIqKAAJKLKKpKLKKACqIqCCSqSKgCgAogCiSEigioAiopASEioSJKgAoAKJKLKASiygoiooEgsAkqkqIAAAogCiSEgqSioAAKAA9cBwLAAAAAAoAAAAKirCIAAAAqKoAKCAKAKAAgAoAAAAAKACgAAAAAoKiiSACACqgCgAoAAACACgACCooAAkoqNKSiygACqIqSIJKpIqAKACiAKJISKCKgCKigipIoSEqIAoCKoiLKASiygoiooASsAkqkqIAAiooAKJISCoiygAAoAD1wHAsAAAAACgAAAAqKsAioIAAKiqACiCoQoAoACACwAAAAACgAoAAAAAKCoogAIAKoCAAKACgAIAKAACKigACSiyjSkosoAAqiKkiCSqSKgCgAogCiSEigioAiooEhIqASogCgAokosoBKLKCiKigSCwCSqSogACKKIAokhIKiLKAACgAPXAcCwAAAAAKAAAACoqwgioAAAqKoAKCKgoAoACACgAAAAAoAKAAAAACgqKJIAIAKogAANAAIAAAKAACAoAAkoqKpKLKKAAoioqCSqSKgEqACiAKJISKCKgCKiqJKoASJKgAoAKJKLKASiygoiopAAoJKpKiAAIqKACiSEgqIsoAAKAA9cBwLAAAAAAoAAAAKirAIqCAAAKoAKIAQoAoACACwAAAAACgAoD3tqbI1veWTNnSsTrW6J4u5Fyerate+r2+Ucy2zo/o7abat01axrGXkXJjtoxaabVET75iZn7FiJlxOPzzB4Kejer+12RvP6fFogdF3egDaNdHVouapaq/SpyYmfqmmYYduX0fdSwbVV/Qc+nUKaY5+T36Yt3fhVHzZn38HRl+PD8U5deq6PT6PjGnz5ebUo/rl4mRg5NzFy7FzHv2qurctXKZpqon2TEv5DsMTExrAqKEgAgAqiKgADQACAAACgAAiooAAkosoqkosooAKokqggkqkioAoAKIAokhIoIqAIqKCKkihIKIAoAKJKLKASiygoiooASoJKpKiAAIoogCiSEgqIsoAAKAA9cBwLAAAAAAoAAAAKirAIqCAAC+CKoAKCKgoAoACACwAAAAACgyXYGy8jfGv28CiareLbj1uVej+bt890f0p7o+M+DG4iZniImZnsiI75dS9F2zKdm7Ys2b1ERqGVxfy6vGK5jso91Mdnv5nxaiNXA8Q5t7hhtaPv1bR9Z+HroyTSdJwtD0+zp+n49vGxrNPV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FABRAFEkJFBFQBFRQJCRUAlRAFABRJRZQCUWUFEVFAkFgElUlRAAEUUQBRJCQVEWUAAFAAeuA4FgAAAAAUAAAAFRVhBFQAABUVQAUEVBQBQAEAFAAAAABQAUAAAAAFBUUSQAQAVRAAAaAAQAAAUAAEBQABJRUVSUWUUABRFRUElUkVAJUAFEAUSQkUEVAEVFUSVQAkSVABQAUSUWUAlFlBRFRSABQSVSVEAARUUAFEkJBURZQAAUAB64DgWAAAAABQAAAAVFWARUEAAAVQAUQAhQBQAEAFgAAAAAFABQAAAAAUFRRJABABVEVAAGgAEAAAFAABFRQABJRZRVJRZRQAVRJVBBJVJFQBQAUQBRJCRQRUARUUEVJFCQUQBQAUSUWUAlFlBRFRQAlQSVSVEAARRRAFEkJBURZQAAUAB64DgWAAAAABQAAAAVFWARUEAAF8EVQAUEVBQBQAEAFgAAAAAFABQAAAAAUFRRAAQAVUAUAFAAQAAAUAAEVFAAElFlGlEWUAAVRJVBBJVJFQBQAUQBVSQkVBFQBFRQJEkUSVJUQBQAUSUVAJRZQURUUgJBQSVSVEAABFABRJCQVEVAABQAHrgOBYAAAAAFAAAAAFWEQAAABUVQAUQVBQBQAEAFgAAAAAFABQAAAAAUFRRJABABVQAABoABAAABQABBUUAASUWUaUlFlAAFURUEElUkVAFABRAFEkJFBFQBFRQRUkUJCVEAUAFElFlAJRUFJRUUAFBJVJUQABFRQAUSQkFSUVAABQAHrgOBYAAAAAFAAAABUVYBFQQAAVFUAFEFQhQBQAEAFgAAAAAFABQAAAAAUFRRAAQAVRFRQAUABAAABQAARUUAASUVFUlFRQAVRFSRBJVJFQkFARVEAUSQkUEVAEVFBJUkVCQlRAFABRJRZQBFlBRFRQAUEVJUQAAEUAFEkJBUlFQAAUAB64DgWAAAAABQAAAAVFWAQBAABUVQAUEAUAUABABYAAAAABQAUAAAAAFBYRRJABABVQBQAUABAAABQAAQFAAElFRpSUWUAAVRFQQSVSRUAUAFEAUSQkUEVAEVFIElUFElSVEAUAARFlFCUWUFEVFABQSVSVEAARUUAFEkJBURUAAFAAeuA4FgAAAAAUAAAAFRVgEVBAABUVQBFFQBQBQAEAFgAAAAAFABQAAAAAUFRRJABABVAQABoABAAABQAARUUAASUWUaUlFlAAFURUEElUkVAFABRAFEkJFBFQBFRQSVSRQkJUQBRFBRJRZQCUWUFEVFFSQlYBJVJUQABFFEAUSQkFRFlAABQAHrgOBYAAAAAFAAAABUVYQRUAAAVFUAFBFQUAUABABYAAAAABQAUAAAAAFBUUQAEAFVAFABQAEAAAFAABFRQABJRZRVEWUUAFUSVQQSVSRUAUAFEAUSQkUEVAEVFAkSRQkJUQBQAUSUVAJRZQURUUAFgElUlRAAEVFABRJCQVEVAABQAHrgOBYAAAAAFAAAAAFWBBUEAAFRVABQRUFAFAAQAWAAAAAAUAFAAAAABQVFEkAEAFVAVRAFAAQAAAUAAEVFAAElFlGlJRZQABVElUEElUkVCQUAFEAUSQkUEVAEVFBFQUJCVEAUEUUSUWUAlFlBRFRQJBYBJVJUQABFRQAUSQkFSUVAgAFAAeuA4FgAAAAAUAAAAFRVhBFQAABUVQAUQVCFAFAAQAWAAAAAAUAFAAAAABQVFEkAAAUEVAAGgAEAAAFAABFRQABJRZRVJRZRQAVRFQQSVSRUAUAFEAUSQkUEVAEVFICQkVCRJUAFABRJRZQCUWUFEVFAkFgElUlRAAAFEAUSQkFSUVAABQAHrgOBYAAAAAFAAAABUVYRAAAAFRVABQQBQBQAEAFAAAAABQAUAAAAAFBUUSQAQAVUAUAFAAAAQAUAAQVFAAElFRpSUWUAAVRFSRBJVJFQBQAUQBRJCRQRUARUUEVJFCQlRAFARVERZQCUWUFEVFACVgElUlRAAEVFABRJCQVEWUAAFAAeuA4FgAAAAAUAAAAFRVgEVBAABUVQAUQVCFAFAAQAWAAAAAAUAFAAAAABQVFEABABVAQABQAUABABQAARUUAASUWUaUlFlAAFURUkQSVSRUAUAFEAUSQkUEVAEVFAkJFQCVEAUAFElFlAJRZQURUUCQWASVSVEAARRRAFEkJBURZQAAUAB64DgWAAAAABQAAAAUFhBAAAAUFABQQBQBQAEAFgAAAAAFABQAAAAAUFASQAQAVRAAAaAAQAAAUAAEBQABJQFUlAVQABAVBJAVAFABYEAUSQFBAAQFIEkBQkFEAUAFElAAlAFEBSABYBJBRAAEBQAUSQBUQAABQAH//Z')"></div>
+        <div class="body">
+          <span class="tag tag-grey" style="width: 110px; justify-content: flex-start; gap: 0px; align-items: center; font-weight: 500" data-i18n="prizes.main.tag">🎁 Hoofdprijs</span>
+          <h3 data-i18n="prizes.main.title">Airbnb voucher t.w.v. €250</h3>
+          <p data-i18n="prizes.main.desc">Een weekendje weg met je BUFFL spaargroep als ultieme beloning.</p>
+        </div>
+      </article>
+
+      <article class="prize-card reveal">
+        <div class="media" style="background-image:url('data:image/png;base64,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')"></div>
+        <div class="body">
+          <span class="tag tag-grey" style="width: 110px; font-weight: 500" data-i18n="prizes.bonus.tag">🎤 Bonusprijs</span>
+          <h3 data-i18n="prizes.bonus.title">Ticketmaster voucher t.w.v. €100</h3>
+          <p data-i18n="prizes.bonus.desc">Maak je spaargroep aan vóór 4 mei en maak ook kans op deze bonusprijs.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="tag" data-i18n="how.kicker">Hoe deelnemen?</span>
+      <h2 data-i18n="how.title">Zo maak je kans</h2>
+      <p data-i18n="how.lede">Meedoen is eenvoudiger dan je denkt. Volg deze stappen en wie weet zit jij volgende maand in een gezellige Airbnb of geniet je van een live concert met je vrienden of familie.</p>
+    </div>
+
+    <ol class="steps reveal" style="list-style:none; padding:0; margin:0;">
+      <li class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3 data-i18n="how.s1.title">Stel je spaardoel in</h3>
+          <p data-i18n="how.s1.body">Open de BUFFL app en ga naar de ‘Reward’ tab. Dit is de derde pagina in de BUFFL app. Kies een spaardoel naar keuze, bijvoorbeeld een Kadonation cadeaubon.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3 data-i18n="how.s2.title">Nodig je vrienden of familie uit</h3>
+          <p data-i18n="how.s2.body">Tik op de knop "Spaar sneller samen" en nodig je vrienden of familie uit via WhatsApp, sms of een ander kanaal naar keuze. Zijn deze personen nog geen BUFFL-gebruiker? Geen probleem! Via de link kunnen ze in een handomdraai een account aanmaken en de BUFFL App downloaden.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3 data-i18n="how.s3.title">Maak je groep compleet</h3>
+          <p style="font-weight: 400" data-i18n="how.s3.body">Jullie spaargroep bestaat uit maximaal 5 personen. Is iedereen aan boord? Controleer je groep even en maak een screenshot van je Rewardpagina waarop je spaargroep duidelijk zichtbaar is. Tip: Hoe groter je groep, hoe meer kans je maakt om te winnen!</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3 data-i18n="how.s4.title">Upload je screenshot & beantwoord de schiftingsvraag</h3>
+          <p data-i18n="how.s4.body">Upload deze screenshot in de survey "Samen sparen: Maak kans op de bonusprijs 🎤" in de BUFFL app en beantwoord de schiftingsvraag.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h3 data-i18n="how.s5.title">Spaar samen & wacht op de onthulling</h3>
+          <p data-i18n="how.s5.body">Blijf surveys invullen en ontdek hoe snel jullie samen tokens verzamelen. Na 31 mei maken we de winnaars bekend. Houd je inbox en de app goed in de gaten! 🎉</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="bonus reveal" id="bonus-banner" style="border-width: 0px">
+      <span class="tag tag-accent-solid" data-i18n="bonus.tag">🎤 Bonusprijs</span>
+      <h3 data-i18n="bonus.title">Snel zijn loont</h3>
+      <p data-i18n-html="bonus.body">Wie zijn groep aanmaakt vóór <strong id="bonus-date-str">4 mei 2026</strong> maakt ook kans op de bonusprijs: een Ticketmaster-budget van €100 om een concert bij te wonen met je vrienden of familie.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTIONS -->
+<section class="bg-subtle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="tag" data-i18n="videos.kicker">Instructies</span>
+      <h2 data-i18n="videos.title">Hulp nodig? We leggen het je uit</h2>
+      <p data-i18n="videos.lede">Nog niet helemaal zeker hoe je een spaargroep aanmaakt? Geen stress. Deze korte video's leggen stap voor stap uit hoe je meedoet.</p>
+    </div>
+
+    <div class="videos">
+      <div class="video-card reveal" role="button" tabindex="0" data-video-key="v1" data-yt-id="9wBiblU9wug">
+        <div class="thumb">
+          <img class="yt-thumb" src="https://i.ytimg.com/vi/9wBiblU9wug/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/9wBiblU9wug/mqdefault.jpg'" />
+          <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="meta"><h3 data-i18n="videos.v1.title">Stel een spaardoel in</h3><p data-i18n="videos.v1.desc">Zo kies je een spaardoel in de Reward tab van de BUFFL app.</p></div>
+      </div>
+      <div class="video-card reveal" role="button" tabindex="0" data-video-key="v2" data-yt-id="c1KeLYqxtwg">
+        <div class="thumb">
+          <img class="yt-thumb" src="https://i.ytimg.com/vi/c1KeLYqxtwg/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/c1KeLYqxtwg/mqdefault.jpg'" />
+          <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="meta"><h3 data-i18n="videos.v2.title">Nodig vrienden of familie uit</h3><p data-i18n="videos.v2.desc"> Zo stuur je een uitnodiging via WhatsApp, sms of een ander kanaal naar keuze.</p></div>
+      </div>
+      <div class="video-card reveal" role="button" tabindex="0" data-video-key="v3" data-yt-id="XhKu_etQ-AI">
+        <div class="thumb">
+          <img class="yt-thumb" src="https://i.ytimg.com/vi/XhKu_etQ-AI/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/XhKu_etQ-AI/mqdefault.jpg'" />
+          <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="meta"><h3 data-i18n="videos.v3.title">Maak een screenshot van je spaargroep</h3><p data-i18n="videos.v3.desc">Zo maak je een screenshot van je spaargroep en upload je die in de wedstrijdsurvey.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="tag" data-i18n="faq.kicker">Veelgestelde vragen</span>
+      <h2 data-i18n="faq.title">Alles wat je wil weten</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <a href="https://buffl.be" class="logo"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ1IiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTQ1IDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNCAyNi4wMjU3QzcuNTY4NDUgMjYuMDE5MSA3LjU2ODQ1IDI2LjAxOTEgMTEuMjA5IDI2LjAxMjRDMTEuOTU4NCAyNi4wMTA1IDEyLjcwNzggMjYuMDA4NSAxMy40Nzk5IDI2LjAwNjVDMTQuMzk5NSAyNi4wMDU2IDE0LjM5OTUgMjYuMDA1NiAxNC44MzA5IDI2LjAwNTRDMTUuMTMwMyAyNi4wMDUyIDE1LjQyOTYgMjYuMDA0NCAxNS43MjkgMjYuMDAzM0MxNi4xMTIzIDI2LjAwMTggMTYuNDk1NiAyNi4wMDE0IDE2Ljg3ODkgMjYuMDAxN0MxNy4wMTg3IDI2LjAwMTYgMTcuMTU4NSAyNi4wMDEyIDE3LjI5ODMgMjYuMDAwNEMxOC4zOTYgMjUuOTk0MiAxOS40ODU5IDI2LjA2NTEgMjAuNTI5MSAyNi40MzcxQzIwLjU4MjEgMjYuNDU1NSAyMC42MzUxIDI2LjQ3NCAyMC42ODk3IDI2LjQ5MjlDMjIuMTcyNyAyNy4wMjQzIDIzLjI4NjggMjguMDIzNSAyMy45ODI1IDI5LjQyMzVDMjQuOTAyMSAzMS40MDM3IDI0Ljg0NTQgMzMuOTY0NCAyNC4xMjQ3IDM2LjAwNjlDMjMuNTU0MyAzNy40MjgzIDIyLjY4ODIgMzguMzY1NiAyMS4yODAyIDM4Ljk4QzIxLjEzODcgMzkuMDI5MiAyMC45OTY3IDM5LjA3NzEgMjAuODUzNSAzOS4xMjE2QzIwLjkxNzQgMzkuMTM1NSAyMC45ODEyIDM5LjE0OTMgMjEuMDQ2OSAzOS4xNjM2QzIyLjU4OCAzOS41MzEzIDIzLjkzNzggNDAuMzQ3NiAyNC44MDkyIDQxLjY5MjFDMjUuMDIwNCA0Mi4wNjg5IDI1LjE1ODUgNDIuNDUzNyAyNS4yODQ3IDQyLjg2NDZDMjUuMzAyIDQyLjkyMDQgMjUuMzE5MiA0Mi45NzYzIDI1LjMzNyA0My4wMzM5QzI1LjU5NSA0My45MzA3IDI1LjY0NTEgNDQuODMxOCAyNS42NDAzIDQ1Ljc1ODFDMjUuNjQwMSA0NS44MTA5IDI1LjY0IDQ1Ljg2MzggMjUuNjM5OCA0NS45MTgzQzI1LjYzMDYgNDcuODk1NiAyNS4xOTY5IDQ5LjkwMDkgMjMuNzY5MSA1MS4zNjgxQzIyLjc0NjkgNTIuMzIyMSAyMS41NzQ5IDUyLjg3NzUgMjAuMjE4IDUzLjE1OTlDMjAuMTY0NyA1My4xNzEyIDIwLjExMTUgNTMuMTgyNSAyMC4wNTY2IDUzLjE5NDFDMTkuMDA1MyA1My4zOTM3IDE3LjkwOTggNTMuMzYwMyAxNi44NDQyIDUzLjM1ODJDMTYuNzAwOSA1My4zNTgyIDE2LjU1NzcgNTMuMzU4MiAxNi40MTQ0IDUzLjM1ODJDMTYuMDM0NSA1My4zNTgyIDE1LjY1NDYgNTMuMzU3OCAxNS4yNzQ3IDUzLjM1NzNDMTQuOTE2OCA1My4zNTY5IDE0LjU1ODkgNTMuMzU2OSAxNC4yMDEgNTMuMzU2OEMxMy4xNTc3IDUzLjM1NjUgMTIuMTE0NSA1My4zNTU1IDExLjA3MTIgNTMuMzU0NkM4LjczNzcgNTMuMzUzMSA2LjQwNDIxIDUzLjM1MTcgNCA1My4zNTAyQzQgNDQuMzMzMSA0IDM1LjMxNiA0IDI2LjAyNTdaTTkuNjE3ODUgMzAuNjI2OUM5LjYxNzg1IDMyLjg2OTUgOS42MTc4NSAzNS4xMTIxIDkuNjE3ODUgMzcuNDIyN0MxMC44NDgzIDM3LjQzMyAxMC44NDgzIDM3LjQzMyAxMi4wNzg3IDM3LjQ0QzEyLjU4MTEgMzcuNDQyMSAxMy4wODM0IDM3LjQ0NDYgMTMuNTg1NyAzNy40NDk0QzEzLjk5MSAzNy40NTMyIDE0LjM5NjMgMzcuNDU1MyAxNC44MDE2IDM3LjQ1NjNDMTQuOTU1NyAzNy40NTY5IDE1LjEwOTggMzcuNDU4MiAxNS4yNjM5IDM3LjQ2MDFDMTYuNjE4NyAzNy40ODIyIDE2LjYxODcgMzcuNDgyMiAxNy43ODY4IDM2Ljg1MTlDMTguNjA3OCAzNS45MjcgMTguNzI3OSAzNC42NzE2IDE4LjY2NDEgMzMuNDkwNEMxOC41OTE1IDMyLjY1MjcgMTguMzMyNSAzMS44Mjk1IDE3LjcwNjggMzEuMjM3NUMxNi43NzkyIDMwLjUyMjIgMTUuNTMxNCAzMC42MDY4IDE0LjQyMzUgMzAuNjEzMUMxNC4zMDAxIDMwLjYxMzMgMTQuMTc2NyAzMC42MTM1IDE0LjA1MzMgMzAuNjEzNkMxMy42IDMwLjYxNDMgMTMuMTQ2NyAzMC42MTYzIDEyLjY5MzQgMzAuNjE4MUMxMS4xNzEgMzAuNjIyNSAxMS4xNzEgMzAuNjIyNSA5LjYxNzg1IDMwLjYyNjlaTTkuNjE3ODUgNDEuOTUzMkM5LjYxNzg1IDQ0LjE0OSA5LjYxNzg1IDQ2LjM0NDkgOS42MTc4NSA0OC42MDczQzEwLjk2MzggNDguNjEzNSAxMC45NjM4IDQ4LjYxMzUgMTIuMzA5NyA0OC42MTc3QzEyLjg1OSA0OC42MTg5IDEzLjQwODMgNDguNjIwNCAxMy45NTc2IDQ4LjYyMzNDMTQuNDAwNyA0OC42MjU2IDE0Ljg0MzggNDguNjI2OSAxNS4yODY5IDQ4LjYyNzVDMTUuNDU1NiA0OC42Mjc4IDE1LjYyNDMgNDguNjI4NiAxNS43OTI5IDQ4LjYyOThDMTYuMDMgNDguNjMxMyAxNi4yNjcgNDguNjMxNSAxNi41MDQxIDQ4LjYzMTRDMTYuNjA3NiA0OC42MzI2IDE2LjYwNzYgNDguNjMyNiAxNi43MTMyIDQ4LjYzMzdDMTcuNDk0NiA0OC42MzAzIDE4LjE5MzkgNDguNDQ3NyAxOC43ODIxIDQ3LjkyMjFDMTkuNDM5NiA0Ny4yNDM3IDE5LjYzMzkgNDYuMzE5NCAxOS42NjY5IDQ1LjQwNDFDMTkuNjUwNyA0NC42NjUxIDE5LjUxMzQgNDMuODc2MSAxOS4xNDY5IDQzLjIyNzRDMTkuMTA1OCA0My4xNTQ0IDE5LjA2NDcgNDMuMDgxNCAxOS4wMjI0IDQzLjAwNjFDMTguNTQ3NSA0Mi40MDIxIDE3Ljk4MzggNDIuMDg1IDE3LjIyNjggNDEuOTUzMkMxNy4xMTY0IDQxLjk0NzIgMTcuMDA1OCA0MS45NDQ1IDE2Ljg5NTIgNDEuOTQ0NkMxNi44MzA3IDQxLjk0NDUgMTYuNzY2MiA0MS45NDQ0IDE2LjY5OTcgNDEuOTQ0M0MxNi41OTQ5IDQxLjk0NDcgMTYuNTk0OSA0MS45NDQ3IDE2LjQ4OCA0MS45NDUxQzE2LjQxMzcgNDEuOTQ1MSAxNi4zMzk1IDQxLjk0NTEgMTYuMjYyOSA0MS45NDUxQzE2LjAxNzggNDEuOTQ1MSAxNS43NzI3IDQxLjk0NTcgMTUuNTI3NiA0MS45NDYyQzE1LjM1NzYgNDEuOTQ2NCAxNS4xODc1IDQxLjk0NjUgMTUuMDE3NCA0MS45NDY1QzE0LjU3IDQxLjk0NjggMTQuMTIyNiA0MS45NDc1IDEzLjY3NTIgNDEuOTQ4M0MxMy4xMzgyIDQxLjk0OTEgMTIuNjAxMyA0MS45NDk1IDEyLjA2NDMgNDEuOTQ5OUMxMS4yNDg4IDQxLjk1MDYgMTAuNDMzMyA0MS45NTE5IDkuNjE3ODUgNDEuOTUzMloiIGZpbGw9IiMxMDE4MjgiPjwvcGF0aD4KPHBhdGggZD0iTTY0LjAxODkgMjYuMDI1N0M2OS45MjEyIDI2LjAyNTcgNjkuOTIxMiAyNi4wMjU3IDcyLjQ4MTMgMjYuODc1MUM3OC45MDY1IDI4LjU5NzIgODUuMjQwOCAyOC4zNDAzIDkxLjUxNCAyNi4xNzMxQzkxLjU3MDggMjYuMTUzNiA5MS42Mjc1IDI2LjEzNDIgOTEuNjg1OSAyNi4xMTQyQzkxLjczNTIgMjYuMDk3IDkxLjc4NDQgMjYuMDc5OSA5MS44MzUxIDI2LjA2MjJDOTEuOTY1OSAyNi4wMjU3IDkxLjk2NTkgMjYuMDI1NyA5Mi4xNzkzIDI2LjAyNTdDOTIuMTc5MyAyNy42ODQzIDkyLjE3OTMgMjkuMzQyOCA5Mi4xNzkzIDMxLjA1MTdDOTEuMjE2OSAzMS40NTA5IDkxLjIxNjkgMzEuNDUwOSA5MC44NjE1IDMxLjU2MjFDOTAuNzgxNSAzMS41ODcyIDkwLjcwMTQgMzEuNjEyMyA5MC42MTg5IDMxLjYzODFDOTAuNTM1NSAzMS42NjM2IDkwLjQ1MiAzMS42ODkxIDkwLjM2NTkgMzEuNzE1M0M5MC4yNzY3IDMxLjc0MjYgOTAuMTg3NCAzMS43Njk5IDkwLjA5NTQgMzEuNzk4MUM4Ny45NjQ5IDMyLjQ0MzIgODUuNzkyNyAzMi44OTUyIDgzLjU3NDcgMzMuMTA0NkM4My41MDMxIDMzLjExMTMgODMuNDMxNSAzMy4xMTgxIDgzLjM1NzcgMzMuMTI1MUM4Mi41NjcyIDMzLjE5MDUgODEuNzc2MyAzMy4xOTI2IDgwLjk4MzYgMzMuMTkzQzgwLjg3MjkgMzMuMTkzMSA4MC44NzI5IDMzLjE5MzEgODAuNzU5OSAzMy4xOTMyQzc5LjUwNDcgMzMuMTkxOSA3OC4yNzcxIDMzLjEzNjMgNzcuMDMyNCAzMi45NjNDNzYuOTQ0NyAzMi45NTA4IDc2Ljg1NjkgMzIuOTM4NyA3Ni43NjY1IDMyLjkyNjJDNzQuMzM0NyAzMi41Nzc4IDcyLjAzMzggMzEuODk0MyA2OS43MDc5IDMxLjEyMjVDNjkuNzA3OSAzMy4xMDgxIDY5LjcwNzkgMzUuMDkzNyA2OS43MDc5IDM3LjEzOTVDNjkuOTQyNiAzNy4yMDk2IDcwLjE3NzIgMzcuMjc5NyA3MC40MTkgMzcuMzUxOUM3MC41ODQ5IDM3LjQwNDEgNzAuNzUwNyAzNy40NTY4IDcwLjkxNjIgMzcuNTEwMUM3Ni43Njg1IDM5LjM3ODggODIuNzAyMiAzOS43Mjc5IDkwLjcxMzYgMzcuNTk1M0M5MC44MTQ5IDM3LjU2MTMgOTAuODE0OSAzNy41NjEzIDkwLjkxODIgMzcuNTI2NkM5MC45NzY3IDM3LjUwNjUgOTEuMDM1MiAzNy40ODY0IDkxLjA5NTQgMzcuNDY1N0M5MS4yNTQ4IDM3LjQyMjcgOTEuMjU0OCAzNy40MjI3IDkxLjUzOTMgMzcuNDIyN0M5MS41MzkzIDM5LjA4MTMgOTEuNTM5MyA0MC43Mzk4IDkxLjUzOTMgNDIuNDQ4N0M5MC45MjYzIDQyLjY5MjcgOTAuMzIyNiA0Mi44OTMxIDg5LjY5MDQgNDMuMDcyNUM4OS42MzY0IDQzLjA4NzkgODkuNTgyNCA0My4xMDMyIDg5LjUyNjggNDMuMTE5Qzg3LjY0NDEgNDMuNjUwOSA4NS43MzQyIDQ0LjAxMTYgODMuNzg4MSA0NC4yMTg0QzgzLjcwMzUgNDQuMjI3NSA4My43MDM1IDQ0LjIyNzUgODMuNjE3MyA0NC4yMzY4QzgzLjExMDggNDQuMjg3NiA4Mi42MDg2IDQ0LjMwMTYgODIuMDk5NyA0NC4zMDM2QzgyLjAxNDggNDQuMzA0MSA4MS45Mjk5IDQ0LjMwNDYgODEuODQyNSA0NC4zMDUxQzc4LjMyMDQgNDQuMzIxMSA3OC4zMjA0IDQ0LjMyMTEgNzYuODE5MSA0NC4wNzY4Qzc2LjcyNzQgNDQuMDYyNCA3Ni42MzU3IDQ0LjA0NzkgNzYuNTQxMyA0NC4wMzMxQzc0LjM0NTYgNDMuNjgyOSA3Mi4yNDg2IDQzLjEwNjUgNzAuMTQ4OCA0Mi4zODUzQzcwLjAwMjEgNDIuMzM0OSA2OS44NTUxIDQyLjI4NTIgNjkuNzA3OSA0Mi4yMzYzQzY5LjcwNzkgNDUuOTAzOSA2OS43MDc5IDQ5LjU3MTQgNjkuNzA3OSA1My4zNTAyQzY3LjgzMDUgNTMuMzUwMiA2NS45NTMyIDUzLjM1MDIgNjQuMDE4OSA1My4zNTAyQzY0LjAxODkgNDQuMzMzMSA2NC4wMTg5IDM1LjMxNiA2NC4wMTg5IDI2LjAyNTdaIiBmaWxsPSIjMTAxODI4Ij48L3BhdGg+CjxwYXRoIGQ9Ik0zMy43OTYzIDI2LjAyNTdDMzUuNjk3MSAyNi4wMjU3IDM3LjU5NzkgMjYuMDI1NyAzOS41NTYzIDI2LjAyNTdDMzkuNTU3NCAyNi42MTUyIDM5LjU1ODQgMjcuMjA0OCAzOS41NTk1IDI3LjgxMjJDMzkuNTYzIDI5LjcwMDIgMzkuNTY3NSAzMS41ODgzIDM5LjU3MjYgMzMuNDc2M0MzOS41NzM0IDMzLjc2OTggMzkuNTc0MiAzNC4wNjMyIDM5LjU3NSAzNC4zNTY3QzM5LjU3NTIgMzQuNDE1MSAzOS41NzUzIDM0LjQ3MzUgMzkuNTc1NSAzNC41MzM3QzM5LjU3OCAzNS40Nzg2IDM5LjU3OTggMzYuNDIzNSAzOS41ODEzIDM3LjM2ODVDMzkuNTgyOCAzOC4zMzg2IDM5LjU4NTIgMzkuMzA4OCAzOS41ODgyIDQwLjI3ODlDMzkuNTkwMSA0MC44NzcyIDM5LjU5MTQgNDEuNDc1NCAzOS41OTE4IDQyLjA3MzdDMzkuNTkyMiA0Mi40ODQ0IDM5LjU5MzQgNDIuODk1IDM5LjU5NTEgNDMuMzA1N0MzOS41OTYxIDQzLjU0MjQgMzkuNTk2NyA0My43NzkgMzkuNTk2NSA0NC4wMTU3QzM5LjU5NjQgNDQuMjczIDM5LjU5NzYgNDQuNTMwMyAzOS41OTkxIDQ0Ljc4NzZDMzkuNTk4OCA0NC44NjE0IDM5LjU5ODQgNDQuOTM1MyAzOS41OTgxIDQ1LjAxMTNDMzkuNjA3NSA0NS45OTk0IDM5Ljg4MzUgNDYuODg1NyA0MC41Nzg2IDQ3LjYwNzRDNDEuNzg1OCA0OC43Mjc0IDQzLjM3NCA0OC44MTUzIDQ0Ljk0NTUgNDguNzYyNEM0NS45NzA5IDQ4LjcwMTggNDcuMDcxOCA0OC4zMzU4IDQ3LjgyMzkgNDcuNjE2QzQ4LjU4NjggNDYuNzQ0IDQ4LjgxMTEgNDUuNzYwMSA0OC44MTIyIDQ0LjYzNDRDNDguODEyNSA0NC41NTQ4IDQ4LjgxMjkgNDQuNDc1MiA0OC44MTMyIDQ0LjM5MzNDNDguODE0MyA0NC4xMjY1IDQ4LjgxNDkgNDMuODU5OCA0OC44MTU1IDQzLjU5MzFDNDguODE2MiA0My40MDE5IDQ4LjgxNjkgNDMuMjEwOCA0OC44MTc2IDQzLjAxOTZDNDguODE5MiA0Mi42MDggNDguODIwNSA0Mi4xOTY0IDQ4LjgyMTYgNDEuNzg0OEM0OC44MjMyIDQxLjE4OTcgNDguODI1MiA0MC41OTQ2IDQ4LjgyNzMgMzkuOTk5NUM0OC44MzA3IDM5LjAzNCA0OC44MzM4IDM4LjA2ODQgNDguODM2NiAzNy4xMDI4QzQ4LjgzOTQgMzYuMTY1IDQ4Ljg0MjQgMzUuMjI3MSA0OC44NDU1IDM0LjI4OTNDNDguODQ1OCAzNC4yMDI1IDQ4Ljg0NTggMzQuMjAyNSA0OC44NDYxIDM0LjExNEM0OC44NDcxIDMzLjgyNCA0OC44NDgxIDMzLjUzMzkgNDguODQ5IDMzLjI0MzhDNDguODU3MiAzMC44Mzc3IDQ4Ljg2NDcgMjguNDMxNyA0OC44NzIgMjYuMDI1N0M1MC43NzI4IDI2LjAyNTcgNTIuNjczNyAyNi4wMjU3IDU0LjYzMjEgMjYuMDI1N0M1NC42MzUyIDI4LjUzNjkgNTQuNjM3OSAzMS4wNDggNTQuNjM5NCAzMy41NTkyQzU0LjYzOTUgMzMuODU2MyA1NC42Mzk3IDM0LjE1MzQgNTQuNjM5OSAzNC40NTA0QzU0LjY0IDM0LjUzOTEgNTQuNjQgMzQuNTM5MSA1NC42NCAzNC42Mjk2QzU0LjY0MDYgMzUuNTg0NyA1NC42NDE4IDM2LjUzOTkgNTQuNjQzMSAzNy40OTVDNTQuNjQ0NCAzOC40NzY0IDU0LjY0NTIgMzkuNDU3OCA1NC42NDU1IDQwLjQzOTNDNTQuNjQ1NyA0MS4wNDM5IDU0LjY0NjMgNDEuNjQ4NiA1NC42NDc0IDQyLjI1MzNDNTQuNjQ4MiA0Mi42NjkgNTQuNjQ4NCA0My4wODQ3IDU0LjY0ODIgNDMuNTAwNEM1NC42NDgxIDQzLjczOTYgNTQuNjQ4MyA0My45Nzg3IDU0LjY0OSA0NC4yMTc5QzU0LjY1NjEgNDYuNzczOCA1NC40MzIxIDQ5LjAwNDggNTIuNTY5OCA1MC45NDMzQzUyLjUxMTEgNTEuMDA4NSA1Mi41MTExIDUxLjAwODUgNTIuNDUxMiA1MS4wNzVDNTAuODA1MiA1Mi44Mzg5IDQ3Ljk2MDYgNTMuNTMyNCA0NS42Mjg2IDUzLjY0MkM0NS4xNTQyIDUzLjY1NjcgNDQuNjc5OSA1My42NTcyIDQ0LjIwNTMgNTMuNjU1NEM0NC4xMzMgNTMuNjU1MyA0NC4wNjA4IDUzLjY1NTIgNDMuOTg2MyA1My42NTVDNDIuOTQ2OSA1My42NTE5IDQxLjkyODQgNTMuNjM0NyA0MC45MDc1IDUzLjQyMDlDNDAuODQ3OCA1My40MDg4IDQwLjc4ODEgNTMuMzk2NiA0MC43MjY2IDUzLjM4NDFDMzguNDM4OCA1Mi45MDM1IDM2LjI4NTEgNTEuOTAwNCAzNC45NTYzIDQ5LjkwODFDMzQuMDk0NiA0OC41NTE2IDMzLjc4MzQgNDcuMDEyNiAzMy43ODc3IDQ1LjQyNjFDMzMuNzg3NyA0NS4zNDI4IDMzLjc4NzYgNDUuMjU5NiAzMy43ODc1IDQ1LjE3MzlDMzMuNzg3NCA0NC45NDQ1IDMzLjc4NzcgNDQuNzE1MSAzMy43ODggNDQuNDg1N0MzMy43ODgzIDQ0LjIzNzcgMzMuNzg4MiA0My45ODk4IDMzLjc4ODIgNDMuNzQxOEMzMy43ODgxIDQzLjMxMjcgMzMuNzg4MyA0Mi44ODM2IDMzLjc4ODcgNDIuNDU0NUMzMy43ODkzIDQxLjgzNDEgMzMuNzg5NSA0MS4yMTM3IDMzLjc4OTYgNDAuNTkzM0MzMy43ODk4IDM5LjU4NjcgMzMuNzkwMiAzOC41OCAzMy43OTA5IDM3LjU3MzRDMzMuNzkxNiAzNi41OTU4IDMzLjc5MjEgMzUuNjE4MSAzMy43OTI0IDM0LjY0MDVDMzMuNzkyNCAzNC41NTAxIDMzLjc5MjQgMzQuNTUwMSAzMy43OTI0IDM0LjQ1NzhDMzMuNzkyNSAzNC4xNTUyIDMzLjc5MjYgMzMuODUyNyAzMy43OTI3IDMzLjU1MDFDMzMuNzkzNCAzMS4wNDIgMzMuNzk0NyAyOC41MzM4IDMzLjc5NjMgMjYuMDI1N1oiIGZpbGw9IiMxMDE4MjgiPjwvcGF0aD4KPHBhdGggZD0iTTk3LjUxMjEgMjYuMDI1N0MxMDMuNDI2IDI2LjAyNTcgMTA5LjMzOSAyNi4wMjU3IDExNS40MzIgMjYuMDI1N0MxMTUuNDMyIDI3LjY4NDMgMTE1LjQzMiAyOS4zNDI4IDExNS40MzIgMzEuMDUxN0MxMTEuMzk2IDMxLjA1MTcgMTA3LjM2IDMxLjA1MTcgMTAzLjIwMSAzMS4wNTE3QzEwMy4yMDEgMzMuMDM3MyAxMDMuMjAxIDM1LjAyMjkgMTAzLjIwMSAzNy4wNjg3QzEwNy4wMDMgMzcuMDY4NyAxMTAuODA0IDM3LjA2ODcgMTE0LjcyMSAzNy4wNjg3QzExNC43MjEgMzguNzUwNyAxMTQuNzIxIDQwLjQzMjYgMTE0LjcyMSA0Mi4xNjU1QzExMC45MiA0Mi4xNjU1IDEwNy4xMTggNDIuMTY1NSAxMDMuMjAxIDQyLjE2NTVDMTAzLjIwMSA0NS44NTY1IDEwMy4yMDEgNDkuNTQ3NCAxMDMuMjAxIDUzLjM1MDJDMTAxLjMyNCA1My4zNTAyIDk5LjQ0NjQgNTMuMzUwMiA5Ny41MTIxIDUzLjM1MDJDOTcuNTEyMSA0NC4zMzMxIDk3LjUxMjEgMzUuMzE2IDk3LjUxMjEgMjYuMDI1N1oiIGZpbGw9IiMxMDE4MjgiPjwvcGF0aD4KPHBhdGggZD0iTTEyMy42ODEgMjYuMDI1N0MxMjUuNjA1IDI2LjAyNTcgMTI3LjUzIDI2LjAyNTcgMTI5LjUxMiAyNi4wMjU3QzEyOS41MTIgMzMuNDA3NSAxMjkuNTEyIDQwLjc4OTQgMTI5LjUxMiA0OC4zOTQ5QzEzMy4zMzcgNDguMzk0OSAxMzcuMTYyIDQ4LjM5NDkgMTQxLjEwMyA0OC4zOTQ5QzE0MS4xMDMgNTAuMDMwMiAxNDEuMTAzIDUxLjY2NTQgMTQxLjEwMyA1My4zNTAyQzEzNS4zNTQgNTMuMzUwMiAxMjkuNjA1IDUzLjM1MDIgMTIzLjY4MSA1My4zNTAyQzEyMy42ODEgNDQuMzMzMSAxMjMuNjgxIDM1LjMxNiAxMjMuNjgxIDI2LjAyNTdaIiBmaWxsPSIjMTAxODI4Ij48L3BhdGg+Cjwvc3ZnPg==" alt="BUFFL" /></a>
+    <div class="footer-links">
+      <a href="https://buffl.be/legal/privacy-policy" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="https://buffl.be/legal/terms-conditions" data-i18n="footer.terms">Terms & Conditions</a>
+      <a href="https://buffl.be/legal/cookie-policy" data-i18n="footer.cookies">Cookie Policy</a>
+      <span class="copy" data-i18n="footer.copy">© 2026 BUFFL BV. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Video Modal -->
+<div class="modal" id="video-modal" role="dialog" aria-modal="true">
+  <div class="modal-box" id="modal-inner">
+    <span class="tag" style="margin-bottom:12px;" data-i18n="modal.tag">Uitleg</span>
+    <h3 id="modal-title">Video</h3>
+    <p style="margin-top:8px;" data-i18n="modal.body">Hier komt straks de uitlegvideo. We voegen deze toe zodra de opnames klaar zijn.</p>
+    <button class="modal-close" onclick="closeModal()" data-i18n="modal.close">Sluiten</button>
+  </div>
+</div>
+
+<!-- Tweaks panel -->
+<div id="tweaks-panel">
+  <h4>Tweaks</h4>
+  <div class="tweak-row">
+    <label>Accent kleur</label>
+    <div class="tweak-swatches">
+      <button style="background:#6F2A7F" data-accent="#6F2A7F" title="BUFFL purple"></button>
+      <button style="background:#2A5FFF" data-accent="#2A5FFF" title="Blue"></button>
+      <button style="background:#0E8F4E" data-accent="#0E8F4E" title="Green"></button>
+      <button style="background:#E05B2A" data-accent="#E05B2A" title="Orange"></button>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <label for="tw-bonus">Bonus deadline</label>
+    <input type="date" id="tw-bonus" />
+  </div>
+  <div class="tweak-row">
+    <label for="tw-end">Einddatum wedstrijd</label>
+    <input type="date" id="tw-end" />
+  </div>
+  <div class="tweak-row">
+    <label for="tw-bonus-banner">Bonus banner</label>
+    <input type="checkbox" id="tw-bonus-banner" />
+  </div>
+</div>
+
+<script>
+  // ==== Tweaks state ====
+  const TWEAKS = {
+    accent: "#6F2A7F",
+    accentStrong: "#B95ED7",
+    accentSoft: "#F6EBFC",
+    ink: "#101828",
+    muted: "#61646C",
+    line: "#ECECED",
+    subtle: "#F9FAFB",
+    bonusDate: "2026-05-04",
+    endDate: "2026-05-31T21:59:59Z",
+    showBonusBanner: true
+  };
+
+  function hexToRgb(h) {
+    h = h.replace('#','');
+    if (h.length === 3) h = h.split('').map(c=>c+c).join('');
+    return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)];
+  }
+  function mixToWhite(hex, t) {
+    const [r,g,b] = hexToRgb(hex);
+    const m = (c) => Math.round(c + (255 - c) * t);
+    return `rgb(${m(r)},${m(g)},${m(b)})`;
+  }
+  function lightenHex(hex, t) {
+    const [r,g,b] = hexToRgb(hex);
+    const m = (c) => Math.round(c + (255 - c) * t);
+    return `#${[m(r),m(g),m(b)].map(v=>v.toString(16).padStart(2,'0')).join('')}`;
+  }
+
+  function applyAccent(hex) {
+    TWEAKS.accent = hex;
+    TWEAKS.accentSoft = mixToWhite(hex, 0.88);
+    TWEAKS.accentStrong = lightenHex(hex, 0.35);
+    document.documentElement.style.setProperty('--accent', TWEAKS.accent);
+    document.documentElement.style.setProperty('--accent-soft', TWEAKS.accentSoft);
+    document.documentElement.style.setProperty('--accent-strong', TWEAKS.accentStrong);
+    document.querySelectorAll('.tweak-swatches button').forEach(b => {
+      b.classList.toggle('active', b.dataset.accent === hex);
+    });
+  }
+
+  // ==== Countdown ====
+  let currentLang = 'nl';
+  const mainEnd = () => new Date(TWEAKS.endDate);
+  const bonusEnd = () => {
+    const d = new Date(TWEAKS.bonusDate);
+    d.setHours(23,59,59,999);
+    return d;
+  };
+  const pad = n => String(n).padStart(2,'0');
+  const elD = document.getElementById('cd-d');
+  const elH = document.getElementById('cd-h');
+  const elM = document.getElementById('cd-m');
+  const elS = document.getElementById('cd-s');
+  const elCaption = document.getElementById('cd-caption');
+  const elBonusDateStr = document.getElementById('bonus-date-str');
+  const nlDate = d => d.toLocaleDateString('nl-BE', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  function tick() {
+    const now = new Date();
+    const target = mainEnd();
+    const dict = (typeof I18N !== 'undefined' && I18N[currentLang]) ? I18N[currentLang] : null;
+    let label = dict ? dict['clock.caption'] : 'Wedstrijd eindigt op 31 mei 2026';
+    let to = target - now;
+
+    if (to < 0) {
+      to = 0;
+      label = dict ? dict['clock.ended'] : 'De wedstrijd is afgelopen.';
+    }
+
+    const d = Math.max(0, Math.floor(to / 86400000));
+    const h = Math.max(0, Math.floor((to % 86400000) / 3600000));
+    const m = Math.max(0, Math.floor((to % 3600000) / 60000));
+    const s = Math.max(0, Math.floor((to % 60000) / 1000));
+    elD.textContent = pad(d);
+    elH.textContent = pad(h);
+    elM.textContent = pad(m);
+    elS.textContent = pad(s);
+    elCaption.textContent = label;
+
+    // bonus
+    const bonusLocale = currentLang === 'fr' ? 'fr-BE' : 'nl-BE';
+    const bonusDateStr = new Date(TWEAKS.bonusDate).toLocaleDateString(bonusLocale, { day: 'numeric', month: 'long', year: 'numeric' });
+    const bonusEl = document.getElementById('bonus-date-str');
+    if (bonusEl) bonusEl.textContent = bonusDateStr;
+  }
+
+  // ==== i18n ====
+  const I18N = {
+    nl: {
+      "nav.cta": "Download de app",
+      "hero.kicker": "BUFFL Wedstrijd mei 2026",
+      "hero.title": "Spaar sneller samen en win een onvergetelijke ervaring t.w.v. €250 met je vrienden of familie",
+      "hero.lede": "De leukste herinneringen maak je samen, dus waarom zou je ook niet samen winnen? Daarom zetten we met deze wedstrijd de kracht van de Herd in de spotlight: nodig vrienden of familie uit, bundel jullie tokens en spaar tot 5 keer sneller in de BUFFL app. Bovendien maak je samen kans op de volgende prijzen.",
+      "hero.cta1": "Bekijk de prijzen",
+      "hero.cta2": "Hoe deelnemen?",
+      "clock.days": "dagen", "clock.hours": "uur", "clock.minutes": "minuten", "clock.seconds": "seconden",
+      "clock.caption": "Wedstrijd eindigt op 31 mei 2026",
+      "clock.ended": "De wedstrijd is afgelopen — winnaars worden aangekondigd.",
+      "prizes.kicker": "De prijzen",
+      "prizes.title": "Prijzen die gekozen zijn om samen te beleven",
+      "prizes.lede": "Van een relaxed weekendje weg tot een knallend concert. We kozen prijzen die gemaakt zijn om te delen, want dat is precies waar deze wedstrijd om draait.",
+      "prizes.main.tag": "🎁 Hoofdprijs",
+      "prizes.main.title": "Airbnb voucher t.w.v. €250",
+      "prizes.main.desc": "Een weekendje weg met je BUFFL spaargroep als ultieme beloning.",
+      "prizes.bonus.tag": "🎤 Bonusprijs",
+      "prizes.bonus.title": "Ticketmaster voucher t.w.v. €100",
+      "prizes.bonus.desc": "Maak je spaargroep aan vóór 4 mei en maak ook kans op deze bonusprijs.",
+      "how.kicker": "Hoe deelnemen?",
+      "how.title": "Zo maak je kans",
+      "how.lede": "Meedoen is eenvoudiger dan je denkt. Volg deze stappen en wie weet zit jij volgende maand in een gezellige Airbnb of geniet je van een live concert met je vrienden of familie.",
+      "how.s1.title": "Stel je spaardoel in",
+      "how.s1.body": "Open de BUFFL app en ga naar de ‘Reward’ tab. Dit is de derde pagina in de BUFFL app. Kies een spaardoel naar keuze, bijvoorbeeld een Kadonation cadeaubon.",
+      "how.s2.title": "Nodig je vrienden of familie uit",
+      "how.s2.body": "Tik op de knop \"Spaar sneller samen\" en nodig je vrienden of familie uit via WhatsApp, sms of een ander kanaal naar keuze. Zijn deze personen nog geen BUFFL-gebruiker? Geen probleem! Via de link kunnen ze in een handomdraai een account aanmaken en de BUFFL App downloaden.",
+      "how.s3.title": "Maak je groep compleet",
+      "how.s3.body": "Jullie spaargroep bestaat uit maximaal 5 personen. Is iedereen aan boord? Controleer je groep even en maak een screenshot van je Rewardpagina waarop je spaargroep duidelijk zichtbaar is. Tip: Hoe groter je groep, hoe meer kans je maakt om te winnen!",
+      "how.s4.title": "Upload je screenshot & beantwoord de schiftingsvraag",
+      "how.s4.body": "Upload deze screenshot in de survey \"Samen sparen: Maak kans op de bonusprijs 🎤\" in de BUFFL app en beantwoord de schiftingsvraag.",
+      "how.s5.title": "Spaar samen & wacht op de onthulling",
+      "how.s5.body": "Blijf surveys invullen en ontdek hoe snel jullie samen tokens verzamelen. Na 31 mei maken we de winnaars bekend. Houd je inbox en de app goed in de gaten! 🎉",
+      "bonus.tag": "🎤 Bonusprijs",
+      "bonus.title": "Snel zijn loont",
+      "bonus.body": "Wie zijn groep aanmaakt vóór <strong id=\"bonus-date-str\">4 mei 2026</strong> maakt ook kans op de bonusprijs: een Ticketmaster-budget van €100 om een concert bij te wonen met je vrienden of familie.",
+      "videos.kicker": "Instructies",
+      "videos.title": "Hulp nodig? We leggen het je uit",
+      "videos.lede": "Nog niet helemaal zeker hoe je een spaargroep aanmaakt? Geen stress. Deze korte video's leggen stap voor stap uit hoe je meedoet.",
+      "videos.v1.title": "Stel een spaardoel in",
+      "videos.v1.desc": "Zo kies je een spaardoel in de Reward tab van de BUFFL app.",
+      "videos.v2.title": "Nodig vrienden of familie uit",
+      "videos.v2.desc": "Zo stuur je een uitnodiging via WhatsApp, sms of een ander kanaal naar keuze.",
+      "videos.v3.title": "Maak een screenshot van je spaargroep",
+      "videos.v3.desc": "Zo maak je een screenshot van je spaargroep en upload je die in de wedstrijdsurvey.",
+      "faq.kicker": "Veelgestelde vragen",
+      "faq.title": "Alles wat je wil weten",
+      "modal.tag": "Uitleg",
+      "modal.body": "Hier komt straks de uitlegvideo. We voegen deze toe zodra de opnames klaar zijn.",
+      "modal.close": "Sluiten",
+      "footer.privacy": "Privacy Policy",
+      "footer.terms": "Terms & Conditions",
+      "footer.cookies": "Cookie Policy",
+      "footer.copy": "© 2026 BUFFL BV. All rights reserved."
+    },
+    fr: {
+      "nav.cta": "Télécharger l’app",
+      "hero.kicker": "Concours BUFFL mai 2026",
+      "hero.title": "Gagnez une expérience inoubliable d’une valeur de €250 avec vos amis ou votre famille",
+      "hero.lede": "Les plus beaux souvenirs se créent ensemble, alors pourquoi ne pas gagner ensemble aussi ? C’est pourquoi ce concours met la force du Herd à l’honneur : invitez vos amis ou votre famille, regroupez vos tokens et épargnez jusqu’à 5 fois plus vite dans l’application BUFFL. En plus, vous tentez ensemble votre chance de remporter les prix suivants.",
+      "hero.cta1": "Voir les prix",
+      "hero.cta2": "Comment participer ?",
+      "clock.days": "jours", "clock.hours": "heures", "clock.minutes": "minutes", "clock.seconds": "secondes",
+      "clock.caption": "Le concours se termine le 31 mai 2026",
+      "clock.ended": "Le concours est terminé — les gagnants seront annoncés.",
+      "prizes.kicker": "Les prix",
+      "prizes.title": "Des prix conçus pour être vécus ensemble",
+      "prizes.lede": "D’un week-end détente à un concert inoubliable. Nous avons sélectionné des prix faits pour être partagés, car c’est exactement l’esprit de ce concours.",
+      "prizes.main.tag": "🎁 Grand prix",
+      "prizes.main.title": "Bon Airbnb d’une valeur de 250 €",
+      "prizes.main.desc": "Un week-end avec votre groupe d’épargne BUFFL comme récompense ultime.",
+      "prizes.bonus.tag": "🎤 Prix bonus",
+      "prizes.bonus.title": "Bon Ticketmaster d’une valeur de 100 €",
+      "prizes.bonus.desc": "Créez votre groupe d’épargne avant le 4 mai et tentez également de remporter ce prix bonus.",
+      "how.kicker": "Comment participer ?",
+      "how.title": "Comment tenter votre chance",
+      "how.lede": "Participer est plus simple que vous ne le pensez. Suivez ces étapes et qui sait, vous serez peut-être dans un Airbnb convivial le mois prochain ou en train de profiter d’un concert avec vos amis ou votre famille.",
+      "how.s1.title": "Définissez votre objectif d’épargne",
+      "how.s1.body": "Ouvrez l’application BUFFL et allez dans l’onglet « Reward ». Il s’agit de la troisième page de l’application BUFFL. Choisissez un objectif de récompense de votre choix, par exemple un bon cadeau Kadonation.",
+      "how.s2.title": "Invitez vos amis ou votre famille",
+      "how.s2.body": "Appuyez sur le bouton « Économisez plus vite ensemble » et invitez vos amis ou votre famille via WhatsApp, SMS ou tout autre canal de votre choix. Ces personnes n’ont pas encore BUFFL ? Aucun problème ! Grâce au lien, elles peuvent créer un compte en quelques instants et télécharger l’application BUFFL.",
+      "how.s3.title": "Complétez votre groupe",
+      "how.s3.body": "Votre groupe d’épargne peut compter jusqu’à 5 personnes. Tout le monde est prêt ? Vérifiez votre groupe et faites une capture d’écran de votre page Reward où votre groupe est clairement visible. Astuce : plus votre groupe est grand, plus vous avez de chances de gagner !",
+      "how.s4.title": "Téléchargez votre capture d’écran & répondez à la question subsidiaire",
+      "how.s4.body": "Téléchargez cette capture d’écran dans le survey « Épargner ensemble : tentez de gagner le prix bonus 🎤 » dans l’application BUFFL et répondez à la question subsidiaire.",
+      "how.s5.title": "Épargnez ensemble et attendez le résultat",
+      "how.s5.body": "Continuez à remplir des surveys et découvrez à quelle vitesse vous accumulez des jetons ensemble. Les gagnants seront annoncés après le 31 mai. Gardez un œil sur votre boîte mail et sur l’application ! 🎉",
+      "bonus.tag": "🎤 Prix bonus",
+      "bonus.title": "La rapidité est récompensée",
+      "bonus.body": "Ceux qui créent leur groupe avant le <strong id=\"bonus-date-str\">4 mai 2026</strong> ont également une chance de remporter le prix bonus : un budget Ticketmaster de 100 € pour assister à un concert avec leurs amis ou leur famille.",
+      "videos.kicker": "Instructions",
+      "videos.title": "Besoin d’aide ? On vous explique",
+      "videos.lede": "Vous ne savez pas encore comment créer un groupe d’épargne ? Pas de stress. Ces courtes vidéos expliquent étape par étape comment participer.",
+      "videos.v1.title": "Définir un objectif d’épargne",
+      "videos.v1.desc": "Comment choisir un objectif d’épargne dans l’onglet Reward de l’application BUFFL.",
+      "videos.v2.title": "Inviter des amis ou de la famille",
+      "videos.v2.desc": "Comment envoyer une invitation via WhatsApp, SMS ou tout autre canal de votre choix.",
+      "videos.v3.title": "Faire une capture d’écran de votre groupe d’épargne",
+      "videos.v3.desc": "Comment faire une capture d’écran de votre groupe d’épargne et la télécharger dans le survey du concours.",
+      "faq.kicker": "Foire aux questions",
+      "faq.title": "Tout ce que vous voulez savoir",
+      "modal.tag": "Explication",
+      "modal.body": "La vidéo explicative arrive prochainement. Nous l’ajouterons dès que les enregistrements seront prêts.",
+      "modal.close": "Fermer",
+      "footer.privacy": "Politique de confidentialité",
+      "footer.terms": "Conditions générales",
+      "footer.cookies": "Politique de cookies",
+      "footer.copy": "© 2026 BUFFL BV. Tous droits réservés."
+    }
+  };
+
+  const FAQ_I18N = {
+    nl: [
+      { q: "Wie kan meedoen?", a: "Iedereen kan meedoen. Het enige wat je nodig hebt om te kunnen deelnemen is een BUFFL-account in de app." },
+      { q: "Moeten alle groepsleden nieuwe BUFFL-gebruikers zijn?", a: "Nee. Je spaargroep mag bestaan uit zowel bestaande als nieuwe Herdies. Zie het als dé kans om mensen uit je omgeving kennis te laten maken met BUFFL." },
+      { q: "Kan ik samen sparen met iemand die nog geen BUFFL-account heeft?", a: "Ja! Via een uitnodigingslink kunnen zij in een handomdraai een account aanmaken en de BUFFL-app downloaden." },
+      { q: "Met hoeveel personen kan ik samen sparen?", a: "BUFFL ondersteunt spaargroepen van maximaal 5 personen." },
+      { q: "Moet ik met 5 personen zijn om deel te nemen?", a: "Nee. Vanaf dat je met minstens 1 andere persoon samen spaart, kan je deelnemen. Let wel op: hoe meer leden in je groep, hoe groter je kans om te winnen. Wanneer alle 5 leden een screenshot uploaden, maximaliseer je jullie kansen." },
+      { q: "Kan ik van meerdere spaargroepen deel uitmaken?", a: "Nee, dit is niet mogelijk. Je kan slechts deel uitmaken van 1 spaargroep." },
+      { q: "Wie nodig ik het best uit in mijn spaargroep?", a: "Begin bij mensen die je al kent en vertrouwt, zoals vrienden, familieleden, huisgenoten, klasgenoten of collega's. Samen sparen verloopt het vlotst met mensen met wie je al regelmatig contact hebt." },
+      { q: "Wat als iemand in mijn groep niet actief is?", a: "Probeer hen te motiveren. Groepen waarbij alle leden actief sparen presteren beter. Teamwork loont echt." },
+      { q: "Hoe vergroot ik mijn kans om te winnen?", a: "Op twee verschillende manieren:<br>1. <strong>Grotere groep</strong>: een groep van 5 maakt meer kans dan een duo.<br>2. <strong>Actief samen sparen</strong>: hoe actiever jullie groep, hoe beter jullie scoren. Elke deelnemer die een screenshot uploadt maakt kans." },
+      { q: "Wanneer worden de winnaars bekendgemaakt?", a: "De winnaar van de hoofdprijs wordt na 30 mei 2026 bekendgemaakt. De winnaar van de bonusprijs wordt op 5 mei bekend gemaakt. Houd je inbox en de app goed in de gaten!" },
+      { q: "Wat moet ik doen nadat ik een spaargroep heb aangemaakt?", a: "Maak een screenshot van je spaargroep en upload deze in de survey \"TBD\" in de BUFFL-app. Vergeet ook de schiftingsvraag niet in te vullen!" },
+      { q: "Hoe maak ik een screenshot?", a: "<strong>iPhone (Apple):</strong><br>Druk tegelijk op de zij-knop en de volume-omhoog-knop. Het scherm flitst kort op en de screenshot verschijnt linksonder in beeld.<br><br><strong>Android:</strong><br>Houd de aan/uit-knop en de volume-omlaag-knop tegelijk ingedrukt. Bij de meeste toestellen verschijnt de screenshot even als melding onderaan het scherm." },
+      { q: "Ik zie de nieuwe features zoals Spaardoel en Samen sparen niet in de app.", a: "Controleer eerst of je de meest recente versie van de BUFFL-app hebt geïnstalleerd. De functie “Samen sparen” werkt alleen als iedereen met wie je samen spaart de laatste versie van de app gebruikt. Je kan de app updaten via de Apple App Store of de Google Play Store naar versie 6.0.48 of hoger. Wil je nagaan welke versie je momenteel gebruikt? Ga in de BUFFL-app naar je profiel, open het menu “Instellingen” en tik op “App version”." },
+      { q: "Ik ondervind problemen bij het samen sparen.", a: "Controleer of jij en de persoon met wie je samen spaart allebei de nieuwste versie van de BUFFL-app gebruiken. Update de app indien nodig via de Apple App Store of de Google Play Store.<br><br>Blijven de problemen aanhouden? Neem dan contact op via <a href=\"mailto:community@buffl.be\">community@buffl.be</a> of vul het <a href=\"https://buffl.be/community/contact-us\" target=\"_blank\" rel=\"noopener\">contactformulier</a> in." }
+    ],
+    fr: [
+      { q: "Qui peut participer ?", a: "Tout le monde peut participer. La seule chose dont vous avez besoin pour participer est un compte BUFFL dans l’application." },
+      { q: "Tous les membres du groupe doivent-ils être de nouveaux utilisateurs BUFFL ?", a: "Non. Votre groupe d’épargne peut être composé à la fois de Herdies existants et de nouveaux. Voyez cela comme une occasion de faire découvrir BUFFL à votre entourage." },
+      { q: "Puis-je épargner avec quelqu’un qui n’a pas encore de compte BUFFL ?", a: "Oui ! Grâce à un lien d’invitation, ils peuvent créer un compte en quelques instants et télécharger l’application BUFFL." },
+      { q: "Avec combien de personnes puis-je épargner ensemble ?", a: "BUFFL prend en charge des groupes d’épargne jusqu’à 5 personnes." },
+      { q: "Dois-je être 5 pour participer ?", a: "Non. Dès que vous épargnez avec au moins une autre personne, vous pouvez participer. Attention : plus votre groupe est grand, plus vous avez de chances de gagner. Lorsque les 5 membres téléchargent une capture d’écran, vous maximisez vos chances." },
+      { q: "Puis-je faire partie de plusieurs groupes d’épargne ?", a: "Non, ce n’est pas possible. Vous ne pouvez faire partie que d’un seul groupe d’épargne." },
+      { q: "Qui inviter dans mon groupe d’épargne ?", a: "Commencez par les personnes que vous connaissez et en qui vous avez confiance, comme vos amis, votre famille, vos colocataires, vos camarades de classe ou vos collègues. L’épargne en groupe fonctionne mieux avec des personnes avec qui vous êtes déjà en contact régulier." },
+      { q: "Que faire si quelqu’un dans mon groupe n’est pas actif ?", a: "Essayez de les motiver. Les groupes où tous les membres épargnent activement obtiennent de meilleurs résultats. Le travail d’équipe paie vraiment." },
+      { q: "Comment augmenter mes chances de gagner ?", a: "De deux façons :<br>1. <strong>Groupe plus grand</strong> : un groupe de 5 a plus de chances qu’un duo.<br>2. <strong>Épargnez activement ensemble</strong> : plus votre groupe est actif, meilleurs sont vos résultats. Chaque participant qui télécharge une capture d’écran a une chance de gagner." },
+      { q: "Quand les gagnants seront-ils annoncés ?", a: "Le gagnant du grand prix sera annoncé après le 30 mai 2026. Le gagnant du prix bonus sera annoncé le 5 mai. Gardez un œil sur votre boîte mail et l’application !" },
+      { q: "Que dois-je faire après avoir créé un groupe d’épargne ?", a: "Faites une capture d’écran de votre groupe d’épargne et téléchargez-la dans le survey « À DÉFINIR » dans l’application BUFFL. N’oubliez pas de répondre à la question subsidiaire !" },
+      { q: "Comment faire une capture d’écran ?", a: "<strong>iPhone (Apple) :</strong><br>Appuyez simultanément sur le bouton latéral et le bouton volume haut. L’écran clignote brièvement et la capture apparaît en bas à gauche.<br><br><strong>Android :</strong><br>Maintenez en même temps le bouton marche/arrêt et le bouton volume bas. Sur la plupart des appareils, la capture apparaît brièvement en notification en bas de l’écran." },
+      { q: "Je ne vois pas les nouvelles fonctionnalités comme Objectif d’épargne et Épargnez ensemble dans l’application.", a: "Vérifiez d’abord que vous avez installé la version la plus récente de l’application BUFFL. La fonctionnalité « Épargnez ensemble » fonctionne uniquement si toutes les personnes avec qui vous épargnez utilisent la dernière version de l’application. Vous pouvez mettre à jour l’application via l’Apple App Store ou le Google Play Store vers la version 6.0.48 ou une version ultérieure. Pour vérifier la version que vous utilisez actuellement, rendez-vous dans votre profil dans l’application BUFFL, ouvrez le menu « Paramètres » et appuyez sur « App version »." },
+      { q: "Je rencontre des problèmes avec Épargnez ensemble.", a: "Vérifiez que vous et la personne avec qui vous épargnez utilisez bien tous les deux la dernière version de l’application BUFFL. Mettez à jour l’application si nécessaire via l’Apple App Store ou le Google Play Store.<br><br>Si les problèmes persistent, vous pouvez contacter le support à l’adresse suivante : <a href=\"mailto:community@buffl.be\">community@buffl.be</a> ou remplir <a href=\"https://buffl.be/community/contact-us\" target=\"_blank\" rel=\"noopener\">le formulaire</a>." }
+    ]
+  };
+
+  function applyI18n(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    const dict = I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] != null) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] != null) el.innerHTML = dict[key];
+    });
+    // language toggle pressed state
+    document.querySelectorAll('.lang-switch button').forEach(b => {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    renderFAQ();
+    tick();
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(b => {
+    b.addEventListener('click', () => {
+      const lang = b.dataset.lang;
+      history.pushState({ lang }, '', '/' + lang);
+      applyI18n(lang);
+    });
+  });
+
+  // Read language from URL path, fall back to 'nl'
+  function getLangFromPath() {
+    const p = window.location.pathname;
+    if (p.startsWith('/fr')) return 'fr';
+    return 'nl';
+  }
+
+  // initial render
+  tick();
+  setInterval(tick, 1000);
+  applyI18n(getLangFromPath());
+
+  // ==== FAQ ====
+  function renderFAQ() {
+    const FAQ = FAQ_I18N[currentLang] || FAQ_I18N.nl;
+    const list = document.querySelector('.faq-list');
+    list.innerHTML = FAQ.map((f,i) => `
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-${i}">
+          <span>${f.q}</span>
+          <svg class="faq-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a-${i}" style="max-height:0">
+          <div class="faq-a-inner">${f.a}</div>
+        </div>
+      </div>
+    `).join('');
+    const buttons = list.querySelectorAll('.faq-q');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Close all others
+        buttons.forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.nextElementSibling.style.maxHeight = '0';
+          }
+        });
+        // Toggle this one
+        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        const a = btn.nextElementSibling;
+        a.style.maxHeight = expanded ? '0' : a.scrollHeight + 'px';
+      });
+    });
+  }
+  renderFAQ();
+
+  // ==== Video modal ====
+  const modal = document.getElementById('video-modal');
+  const modalInner = document.getElementById('modal-inner');
+  const placeholderHTML = modalInner.innerHTML;
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const ytId = card.dataset.ytId;
+      const dict = I18N[currentLang];
+      if (ytId) {
+        modalInner.classList.add('video-modal-box');
+        modalInner.innerHTML = `
+          <div class="yt-frame">
+            <iframe
+              src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <button class="modal-close" onclick="closeModal()">${dict ? dict['modal.close'] : 'Sluiten'}</button>
+        `;
+        modal.classList.add('open');
+        return;
+      }
+      modalInner.classList.remove('video-modal-box');
+      modalInner.innerHTML = placeholderHTML;
+      modal.classList.add('open');
+    });
+  });
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  function closeModal() {
+    modal.classList.remove('open');
+    // Stop video playback by clearing iframe
+    setTimeout(() => {
+      modalInner.classList.remove('video-modal-box');
+      modalInner.innerHTML = placeholderHTML;
+    }, 200);
+  }
+  window.closeModal = closeModal;
+
+  // ==== Reveal on scroll ====
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ==== Tweaks protocol ====
+  const panel = document.getElementById('tweaks-panel');
+  function bindTweaks() {
+    document.querySelectorAll('.tweak-swatches button').forEach(b => {
+      b.addEventListener('click', () => {
+        applyAccent(b.dataset.accent);
+        postEdits({ accent: b.dataset.accent });
+      });
+    });
+    const tbDate = document.getElementById('tw-bonus');
+    tbDate.value = TWEAKS.bonusDate;
+    tbDate.addEventListener('change', () => {
+      TWEAKS.bonusDate = tbDate.value;
+      tick();
+      postEdits({ bonusDate: tbDate.value });
+    });
+    const tbEnd = document.getElementById('tw-end');
+    tbEnd.value = TWEAKS.endDate.slice(0,10);
+    tbEnd.addEventListener('change', () => {
+      // Treat the picked date as 23:59:59 Brussels time. CEST = UTC+2 in May.
+      TWEAKS.endDate = tbEnd.value + 'T21:59:59Z';
+      tick();
+      postEdits({ endDate: TWEAKS.endDate });
+    });
+    const tbBanner = document.getElementById('tw-bonus-banner');
+    tbBanner.checked = TWEAKS.showBonusBanner;
+    const bonusEl = document.getElementById('bonus-banner');
+    bonusEl.style.display = TWEAKS.showBonusBanner ? '' : 'none';
+    tbBanner.addEventListener('change', () => {
+      TWEAKS.showBonusBanner = tbBanner.checked;
+      bonusEl.style.display = tbBanner.checked ? '' : 'none';
+      postEdits({ showBonusBanner: tbBanner.checked });
+    });
+  }
+  bindTweaks();
+
+  window.addEventListener('message', (e) => {
+    const data = e.data || {};
+    if (data.type === '__activate_edit_mode') panel.classList.add('open');
+    if (data.type === '__deactivate_edit_mode') panel.classList.remove('open');
+  });
+  function postEdits(edits) {
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*'); } catch(e){}
+  }
+  window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+  applyAccent(TWEAKS.accent);
+</script>
+
+</body>
+</html>
